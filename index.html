@@ -27,11 +27,25 @@
         .sidebar::-webkit-scrollbar {
             display: none;
         }
+
         .scroll {
             overflow-y: scroll;
         }
+
         .scroll::-webkit-scrollbar {
             display: none;
+        }
+
+        .scrollx {
+            overflow-x: scroll;
+        }
+
+        .scrollx::-webkit-scrollbar {
+            display: none;
+        }
+
+        .subscrollx {
+            flex: 0 0 auto;
         }
 
         .sidebar a {
@@ -96,7 +110,10 @@
         #main {
             margin-left: 250px;
             transition: margin-left .5s;
-            padding: 16px;
+        }
+
+        .mainer {
+            padding: 16px 16px 16px 16px;
         }
 
         span {
@@ -127,6 +144,20 @@
             border-radius: 80%;
         }
 
+        .navname {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .navprice {
+            font-size: 11px;
+        }
+
+        .navrate {
+            color: #83FBB3;
+            font-size: 9px;
+        }
+
         /* .logo {
             width: 100%;
             height: 100%;
@@ -150,7 +181,8 @@
     <div id="mySidebar" class="sidebar">
         <div>
             <div class="menu flex justify-between" href="#">
-                <img src="assets/image/Icone_Side-Menu/Menu_icon_01.svg" style="width: 30px; height : 30px;" onclick="closeNav()" alt="">
+                <img src="assets/image/Icone_Side-Menu/Menu_icon_01.svg" style="width: 30px; height : 30px;"
+                    onclick="closeNav()" alt="">
                 <span class="sidebarItem flex items-center"><span class="text-gray-500">Total Market Cap: </span>&nbsp;
                     $923.7
                     B</span>
@@ -208,7 +240,8 @@
 
         <div class="grid grid-cols-3 gap-3" id="btnGroup1">
             <div class="flex justify-center">
-                <img id="lightdrap" onclick="btnGroup(event, 'lightdrap')" style="display: none;" src="./assets/image/Lightmode.svg" alt="">
+                <img id="lightdrap" onclick="btnGroup(event, 'lightdrap')" style="display: none;"
+                    src="./assets/image/Lightmode.svg" alt="">
                 <img id="darkdrap" onclick="btnGroup(event, 'darkdrap')" src="assets/image/Darkmode.svg" alt="">
             </div>
             <div class="flex justify-center">
@@ -320,340 +353,458 @@
     </div>
 
     <div id="main" style="background : #1E2233;">
-        <div class="grid grid-flow-col gap-3">
-            <div class="col-span-7">
-                <div class="grid grid-cols-3 gap-3">
 
-                    <!-- -----------Bitcoin-------- -->
+        <!-- NavBar -->
+        <div class="grid grid-cols-11 py-2 px-6 gap-2" style="background: #23203F;">
+            <div class="col-span-4">
+                <form class="flex items-center">
+                    <label for="simple-search" class="sr-only">Search</label>
+                    <div class="relative w-full">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <input type="text" id="simple-search"
+                            style="background: linear-gradient(180deg, #1C1E39 50%, rgba(35, 35, 63, 0.26) 151.92%); border: 1px solid rgba(77, 73, 128, 1);"
+                            class="text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Browse Crypto" required>
+                    </div>
+                </form>
+            </div>
+            <div class="col-span-4 scrollx flex items-center">
+                <div class="flex">
+                    <div class="flex subscrollx justify-around items-center" style="width: 340px;">
+                        <img src="./assets/image/Icone_Side-Menu/navbar/m.svg" alt="">
+                        <p class="text-white text-xs">ERGO new wallet to be released next week</p>
+                        <p class="text-xs" style="color: rgba(92, 92, 234, 1);">Read More</p>
+                    </div>
+                    <div class="flex subscrollx justify-around items-center" style="width: 340px;">
+                        <img src="./assets/image/Icone_Side-Menu/navbar/ethernavbar.svg" alt="">
+                        <p class="text-white text-xs">ETH The Merge was successfully actived</p>
+                        <p class="text-xs" style="color: rgba(92, 92, 234, 1);">Read More</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-3 flex items-center">
+                <div class="w-[100%]">
+                    <div class="flex justify-around">
+                        <button
+                            style="background: linear-gradient(92.66deg, #505089 21.8%, #242441 81.65%); border: 1px solid rgba(93, 93, 137, 1);"
+                            class="text-white px-6 rounded">Login or Register</button>
+                        <img src="./assets/image/Icone_Side-Menu/navbar/Notification icon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                    <div class="bg-black py-1.5 px-5 h-[305px] ">
-                        <div class="flex justify-between my-2.5">
-                            <div>
-                                <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28.9px"
-                                    height="24.5px" viewBox="0 0 28.9 24.5" style="enable-background:new 0 0 28.9 24.5;"
-                                    xml:space="preserve">
-                                    <style type="text/css">
-                                        .st0 {
-                                            fill: url(#Tracciato_5359_1_);
-                                        }
+        <!-- coin Navbar -->
 
-                                        .st1 {
-                                            fill: url(#SVGID_1_);
-                                        }
+        <div style="background: #30314E;" class="py-2 scrollx flex" id="coinnavbar"></div>
 
-                                        .st2 {
-                                            opacity: 0.16;
-                                            fill: #462100;
-                                        }
+        <div class="mainer">
+            <div class="grid grid-cols-12 gap-3">
 
-                                        .st3 {
-                                            fill: url(#SVGID_2_);
-                                        }
-                                    </style>
-                                    <g>
-                                        <linearGradient id="Tracciato_5359_1_" gradientUnits="userSpaceOnUse"
-                                            x1="10.865" y1="8.2719" x2="19.3018" y2="20.4365">
-                                            <stop offset="0" style="stop-color:#1E2434" />
-                                            <stop offset="1" style="stop-color:#000000" />
-                                        </linearGradient>
-                                        <path id="Tracciato_5359_16_" class="st0" d="M24.9,11.9c-0.1,6.4-5.4,11.6-11.9,11.4C6.6,23.2,1.4,17.9,1.6,11.4S7-0.1,13.4,0
-		S25,5.4,24.9,11.9L24.9,11.9 M19,13.5c0-0.4-0.1-0.9-0.3-1.2c-0.3-0.5-0.7-0.9-1.2-1c-0.2-0.1-0.3-0.1-0.5-0.2c0,0,0,0,0,0l0.1,0
-		c0.5-0.2,0.8-0.6,1-1.1c0.1-0.4,0.2-0.8,0.1-1.2c0-0.7-0.4-1.3-1-1.7c-0.5-0.3-1.1-0.5-1.7-0.6c-0.2,0-0.4-0.1-0.7-0.1l0-2.3
-		l-1.4,0l0,2.3l-1.1,0l0-2.3l-1.4,0l0,2.3l-2.8,0l0,1.5l0.1,0c0.4,0,0.7,0,1.1,0c0.4,0,0.7,0.3,0.7,0.7c0,0,0,0,0,0
-		c0,2.1-0.1,4.1-0.1,6.1c0,0.3-0.2,0.5-0.5,0.5c0,0,0,0-0.1,0c-0.3,0-0.6,0-1,0c-0.1,0-0.1,0-0.1,0.1c-0.1,0.5-0.2,1-0.3,1.6
-		c0,0,0,0,0,0.1l2.8,0l0,2.3l1.4,0l0-2.3l1.1,0l0,2.3l1.4,0l0-2.3l0.1,0c0.3,0,0.6,0,0.9-0.1c0.6-0.1,1.1-0.2,1.7-0.4
-		c0.6-0.2,1.1-0.7,1.4-1.3C18.9,14.6,19,14,19,13.5 M16.1,13.2c0.2,0.6-0.1,1.3-0.6,1.5c-0.4,0.2-0.7,0.3-1.1,0.3
-		c-0.7,0.1-1.4,0.1-2.1,0.1c0,0,0,0,0,0l0.1-3.1c0,0,0.1,0,0.1,0c0.5,0,1,0,1.6,0c0.5,0,1,0.1,1.4,0.3C15.7,12.5,16,12.8,16.1,13.2
-		 M12.3,10.6C12.3,10.6,12.3,10.6,12.3,10.6l0-2.8c0.2,0,0.4,0,0.6,0c0.5,0,1,0,1.5,0.2C14.7,8,15,8.2,15.2,8.4
-		c0.5,0.5,0.5,1.2,0,1.7c-0.1,0.1-0.2,0.2-0.3,0.2c-0.3,0.2-0.7,0.3-1,0.3C13.4,10.6,12.9,10.6,12.3,10.6" />
-                                        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="12.2143"
-                                            y1="10.7078" x2="15.4358" y2="17.5748">
-                                            <stop offset="0" style="stop-color:#FFF0FF" />
-                                            <stop offset="0.3496" style="stop-color:#FCEAFF" />
-                                            <stop offset="1" style="stop-color:#AAA3AE" />
-                                        </linearGradient>
-                                        <path class="st1" d="M14.6,19.2l0-2.3l0.1,0c0.3,0,0.6,0,0.9-0.1c0.6-0.1,1.1-0.2,1.7-0.4c0.6-0.2,1.1-0.7,1.4-1.3
-		c0.2-0.5,0.3-1.1,0.3-1.6l0,0c0-0.4-0.1-0.9-0.3-1.2c-0.3-0.5-0.7-0.9-1.2-1c-0.2-0.1-0.3-0.1-0.5-0.2c0,0,0,0,0,0l0.1,0
-		c0.5-0.2,0.8-0.6,1-1.1c0.1-0.4,0.2-0.8,0.1-1.2c0-0.7-0.4-1.3-1-1.7c-0.5-0.3-1.1-0.5-1.7-0.6c-0.2,0-0.4-0.1-0.7-0.1l0-2.3
-		l-1.4,0l0,2.3l-1.1,0l0-2.3l-1.4,0l0,2.3l-2.8,0l0,1.5l0.1,0c0.4,0,0.7,0,1.1,0c0.4,0,0.7,0.3,0.7,0.7c0,0,0,0,0,0
-		c0,2.1-0.1,4.1-0.1,6.1c0,0.3-0.2,0.5-0.5,0.5c0,0,0,0-0.1,0c-0.3,0-0.6,0-1,0c-0.1,0-0.1,0-0.1,0.1c-0.1,0.5-0.2,1-0.3,1.6
-		c0,0,0,0,0,0.1l2.8,0l0,2.3l1.4,0l0-2.3l1.1,0l0,2.3L14.6,19.2z M12.3,7.8c0.2,0,0.4,0,0.6,0c0.5,0,1,0,1.5,0.2
-		C14.7,8,15,8.2,15.2,8.4c0.5,0.5,0.5,1.2,0,1.7c-0.1,0.1-0.2,0.2-0.3,0.2c-0.3,0.2-0.7,0.3-1,0.3c-0.5,0.1-1.1,0.1-1.6,0l0,0
-		c0,0,0,0-0.1,0L12.3,7.8z M12.2,15.1C12.2,15.1,12.2,15.1,12.2,15.1l0-3.1c0,0,0.1,0,0.1,0c0.5,0,1,0,1.6,0c0.5,0,1,0.1,1.4,0.3
-		c0.4,0.1,0.6,0.4,0.8,0.8l0,0c0.2,0.6-0.1,1.3-0.6,1.5c-0.4,0.2-0.7,0.3-1.1,0.3C13.6,15.2,12.9,15.2,12.2,15.1z" />
+                <!-- Top Protocals -->
+
+                <div class="col-span-7">
+
+                    <div class="my-5">
+                        <button class="flex border border-gray-600 rounded py-2 px-2">
+                            <p class="text-white">Top Protocols</p>
+                            <div class="flex items-center justify-center w-[24px] h-[24px]">
+                                <img src="./assets/image/Icone_Side-Menu/Icon.svg" alt="">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-3 gap-3">
+
+                        <!-- -----------Bitcoin-------- -->
+
+                        <div class="bg-black py-1.5 px-5 h-[305px] ">
+                            <div class="flex justify-between my-2.5">
+                                <div>
+                                    <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28.9px"
+                                        height="24.5px" viewBox="0 0 28.9 24.5"
+                                        style="enable-background:new 0 0 28.9 24.5;" xml:space="preserve">
+                                        <style type="text/css">
+                                            .st0 {
+                                                fill: url(#Tracciato_5359_1_);
+                                            }
+
+                                            .st1 {
+                                                fill: url(#SVGID_1_);
+                                            }
+
+                                            .st2 {
+                                                opacity: 0.16;
+                                                fill: #462100;
+                                            }
+
+                                            .st3 {
+                                                fill: url(#SVGID_2_);
+                                            }
+                                        </style>
                                         <g>
-                                            <path class="st2" d="M24.4,8.5c-3.8,4.8-13.1,10.6-18.1,12.5c0,0,1.6,1.1,1.5,1l-6.9,1.8c0.2,0.1,0.6,0.3,1.5,0.3
-			c0.9,0,2.2-0.2,4.3-1c2.2-0.9,5-2.3,7.8-3.9c3.9-2.4,8.5-5.7,11.3-8.8L24.4,8.5z" />
+                                            <linearGradient id="Tracciato_5359_1_" gradientUnits="userSpaceOnUse"
+                                                x1="10.865" y1="8.2719" x2="19.3018" y2="20.4365">
+                                                <stop offset="0" style="stop-color:#1E2434" />
+                                                <stop offset="1" style="stop-color:#000000" />
+                                            </linearGradient>
+                                            <path id="Tracciato_5359_16_" class="st0" d="M24.9,11.9c-0.1,6.4-5.4,11.6-11.9,11.4C6.6,23.2,1.4,17.9,1.6,11.4S7-0.1,13.4,0
+            S25,5.4,24.9,11.9L24.9,11.9 M19,13.5c0-0.4-0.1-0.9-0.3-1.2c-0.3-0.5-0.7-0.9-1.2-1c-0.2-0.1-0.3-0.1-0.5-0.2c0,0,0,0,0,0l0.1,0
+            c0.5-0.2,0.8-0.6,1-1.1c0.1-0.4,0.2-0.8,0.1-1.2c0-0.7-0.4-1.3-1-1.7c-0.5-0.3-1.1-0.5-1.7-0.6c-0.2,0-0.4-0.1-0.7-0.1l0-2.3
+            l-1.4,0l0,2.3l-1.1,0l0-2.3l-1.4,0l0,2.3l-2.8,0l0,1.5l0.1,0c0.4,0,0.7,0,1.1,0c0.4,0,0.7,0.3,0.7,0.7c0,0,0,0,0,0
+            c0,2.1-0.1,4.1-0.1,6.1c0,0.3-0.2,0.5-0.5,0.5c0,0,0,0-0.1,0c-0.3,0-0.6,0-1,0c-0.1,0-0.1,0-0.1,0.1c-0.1,0.5-0.2,1-0.3,1.6
+            c0,0,0,0,0,0.1l2.8,0l0,2.3l1.4,0l0-2.3l1.1,0l0,2.3l1.4,0l0-2.3l0.1,0c0.3,0,0.6,0,0.9-0.1c0.6-0.1,1.1-0.2,1.7-0.4
+            c0.6-0.2,1.1-0.7,1.4-1.3C18.9,14.6,19,14,19,13.5 M16.1,13.2c0.2,0.6-0.1,1.3-0.6,1.5c-0.4,0.2-0.7,0.3-1.1,0.3
+            c-0.7,0.1-1.4,0.1-2.1,0.1c0,0,0,0,0,0l0.1-3.1c0,0,0.1,0,0.1,0c0.5,0,1,0,1.6,0c0.5,0,1,0.1,1.4,0.3C15.7,12.5,16,12.8,16.1,13.2
+             M12.3,10.6C12.3,10.6,12.3,10.6,12.3,10.6l0-2.8c0.2,0,0.4,0,0.6,0c0.5,0,1,0,1.5,0.2C14.7,8,15,8.2,15.2,8.4
+            c0.5,0.5,0.5,1.2,0,1.7c-0.1,0.1-0.2,0.2-0.3,0.2c-0.3,0.2-0.7,0.3-1,0.3C13.4,10.6,12.9,10.6,12.3,10.6" />
+                                            <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="12.2143"
+                                                y1="10.7078" x2="15.4358" y2="17.5748">
+                                                <stop offset="0" style="stop-color:#FFF0FF" />
+                                                <stop offset="0.3496" style="stop-color:#FCEAFF" />
+                                                <stop offset="1" style="stop-color:#AAA3AE" />
+                                            </linearGradient>
+                                            <path class="st1"
+                                                d="M14.6,19.2l0-2.3l0.1,0c0.3,0,0.6,0,0.9-0.1c0.6-0.1,1.1-0.2,1.7-0.4c0.6-0.2,1.1-0.7,1.4-1.3
+            c0.2-0.5,0.3-1.1,0.3-1.6l0,0c0-0.4-0.1-0.9-0.3-1.2c-0.3-0.5-0.7-0.9-1.2-1c-0.2-0.1-0.3-0.1-0.5-0.2c0,0,0,0,0,0l0.1,0
+            c0.5-0.2,0.8-0.6,1-1.1c0.1-0.4,0.2-0.8,0.1-1.2c0-0.7-0.4-1.3-1-1.7c-0.5-0.3-1.1-0.5-1.7-0.6c-0.2,0-0.4-0.1-0.7-0.1l0-2.3
+            l-1.4,0l0,2.3l-1.1,0l0-2.3l-1.4,0l0,2.3l-2.8,0l0,1.5l0.1,0c0.4,0,0.7,0,1.1,0c0.4,0,0.7,0.3,0.7,0.7c0,0,0,0,0,0
+            c0,2.1-0.1,4.1-0.1,6.1c0,0.3-0.2,0.5-0.5,0.5c0,0,0,0-0.1,0c-0.3,0-0.6,0-1,0c-0.1,0-0.1,0-0.1,0.1c-0.1,0.5-0.2,1-0.3,1.6
+            c0,0,0,0,0,0.1l2.8,0l0,2.3l1.4,0l0-2.3l1.1,0l0,2.3L14.6,19.2z M12.3,7.8c0.2,0,0.4,0,0.6,0c0.5,0,1,0,1.5,0.2
+            C14.7,8,15,8.2,15.2,8.4c0.5,0.5,0.5,1.2,0,1.7c-0.1,0.1-0.2,0.2-0.3,0.2c-0.3,0.2-0.7,0.3-1,0.3c-0.5,0.1-1.1,0.1-1.6,0l0,0
+            c0,0,0,0-0.1,0L12.3,7.8z M12.2,15.1C12.2,15.1,12.2,15.1,12.2,15.1l0-3.1c0,0,0.1,0,0.1,0c0.5,0,1,0,1.6,0c0.5,0,1,0.1,1.4,0.3
+            c0.4,0.1,0.6,0.4,0.8,0.8l0,0c0.2,0.6-0.1,1.3-0.6,1.5c-0.4,0.2-0.7,0.3-1.1,0.3C13.6,15.2,12.9,15.2,12.2,15.1z" />
                                             <g>
-                                                <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="18.257"
-                                                    y1="17.5777" x2="12.3831" y2="10.9696">
-                                                    <stop offset="0" style="stop-color:#FFA500" />
-                                                    <stop offset="0.5279" style="stop-color:#FF8800" />
-                                                    <stop offset="1" style="stop-color:#B85300" />
+                                                <path class="st2" d="M24.4,8.5c-3.8,4.8-13.1,10.6-18.1,12.5c0,0,1.6,1.1,1.5,1l-6.9,1.8c0.2,0.1,0.6,0.3,1.5,0.3
+                c0.9,0,2.2-0.2,4.3-1c2.2-0.9,5-2.3,7.8-3.9c3.9-2.4,8.5-5.7,11.3-8.8L24.4,8.5z" />
+                                                <g>
+                                                    <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse"
+                                                        x1="18.257" y1="17.5777" x2="12.3831" y2="10.9696">
+                                                        <stop offset="0" style="stop-color:#FFA500" />
+                                                        <stop offset="0.5279" style="stop-color:#FF8800" />
+                                                        <stop offset="1" style="stop-color:#B85300" />
+                                                    </linearGradient>
+                                                    <path class="st3"
+                                                        d="M22.4,4.5c0.6-0.2,1.2-0.4,1.8-0.5c1.6-0.3,2.3,0,2.4,0.2c0,0.1,0.4,0.7-0.9,3.1C22.9,12.4,10,20.7,4,22.1
+                    c-1.2,0.3-1.7,0.2-1.8,0.1c0-0.1,0-0.5,0.5-1.5c0.4-0.7,0.7-1.4,1.2-2.1l-1.2-2.1l-0.5,0.8c-0.6,0.8-1,1.6-1.4,2.4
+                    c-1.4,2.9-0.3,4,0.5,4.4c0.2,0.1,0.6,0.3,1.5,0.3c0.9,0,2.2-0.2,4.3-1c2.2-0.9,5-2.3,7.8-3.9c4.9-3,10.9-7.5,12.9-11.2
+                    C29,5.9,29.2,4.2,28.4,3c-0.8-1.1-2.3-1.5-4.6-1.1c-1,0.2-2.1,0.5-3,0.9C20.8,2.8,21.8,3.8,22.4,4.5" />
+                                                </g>
+                                                <path class="st2"
+                                                    d="M3.2,19.8c0,0-0.9-0.9-1.4-1.9l0.9-1.3c0,0,0.7,1.3,1.3,2L3.2,19.8z" />
+                                                <path class="st2"
+                                                    d="M20.8,2.8c0,0,1.2,1.1,1.6,1.7l0.2-0.1c0,0-0.6-1-1.4-1.8C21.2,2.6,21.1,2.6,20.8,2.8z" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="text-sm text-center flex items-center"
+                                    style="color:rgba(143, 156, 210, 1);">PoW
+                                </div>
+                            </div>
+                            <div style="background: rgba(48, 49, 78, 0.67); z-index: 0;"
+                                class="flex items-center rounded relative py-2 h-[230px] rounded-xl">
+                                <div class="absolute flex justify-center items-center"
+                                    style="z-index : -1; width: 100%; height: 100%;">
+                                    <img src="./assets/image/ico/Ellipse 42 (1).png" alt="">
+                                </div>
+                                <div class="w-[100%] h-[100%]"
+                                    style="  display: flex; flex-direction: column; justify-content: space-around;">
+                                    <div class="px-3">
+                                        <p class="text-white">Bitcoin Dominance</p>
+                                        <span style="color: rgba(143, 156, 210, 1);">40.01%</span>
+                                        <span class="text-xs" style="color: rgba(131, 251, 179, 1);">+1,10%</span>
+                                    </div>
+                                    <div style="background-color: #101929; opacity: 90%; border: 4px solid black;"
+                                        class="w-[100%] px-3">
+                                        <p class="text-white">Energy Consumption</p>
+                                        <img src="./assets/image/-high 1.png" alt="">
+                                    </div>
+                                    <div class="px-3">
+                                        <p class="text-white">24h Transaction</p>
+                                        <span style="color: rgba(143, 156, 210, 1);"
+                                            class="text-sm">343,565$</span><span style="color: rgba(131, 251, 179, 1);"
+                                            class="text-xs">+0.17%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- -----------Ethereum-------- -->
+
+                        <div class="bg-black py-1.5 px-5 h-[305px] ">
+                            <div class="flex justify-between my-2.5">
+                                <div><img src="./assets/image/ether.png" alt=""></div>
+                                <div class="text-sm text-center flex items-center"
+                                    style="color:rgba(143, 156, 210, 1);">PoS
+                                </div>
+                            </div>
+                            <div style="background: rgba(48, 49, 78, 0.67); z-index: 0;"
+                                class="flex items-center rounded relative py-2 h-[230px] rounded-xl">
+                                <div class="absolute flex justify-center items-center"
+                                    style="z-index : -1; width: 100%; height: 100%;">
+                                    <img src="./assets/image/ether1.png" alt="">
+                                </div>
+                                <div class="w-[100%] h-[100%]"
+                                    style="  display: flex; flex-direction: column; justify-content: space-around;">
+                                    <div class="px-3">
+                                        <p class="text-white">Ethereum Dominance</p>
+                                        <span style="color: rgba(143, 156, 210, 1);">9.24%</span>
+                                        <span class="text-xs" style="color: rgba(131, 251, 179, 1);">+1,10%</span>
+                                    </div>
+                                    <div style="background-color: #101929; opacity: 90%; border: 4px solid black;"
+                                        class="w-[100%] px-3">
+                                        <p class="text-white">Energy Consumption</p>
+                                        <img src="./assets/image/-high 1.png" alt="">
+                                    </div>
+                                    <div class="px-3">
+                                        <p class="text-white">TVL</p>
+                                        <span style="color: rgba(143, 156, 210, 1);"
+                                            class="text-sm">33,565,898,112$</span><span
+                                            style="color: rgba(131, 251, 179, 1);" class="text-xs">+0.17%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- -----------BNB-------- -->
+
+                        <div class="bg-black py-1.5 px-5 h-[305px] ">
+                            <div class="flex justify-between my-2.5">
+                                <div>
+                                    <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28.9px"
+                                        height="24.5px" viewBox="0 0 28.9 24.5"
+                                        style="enable-background:new 0 0 28.9 24.5;" xml:space="preserve">
+                                        <style type="text/css">
+                                            .st0 {
+                                                fill: url(#Tracciato_5359_1_);
+                                            }
+
+                                            .st1 {
+                                                fill: #FFFFFF;
+                                            }
+
+                                            .st2 {
+                                                opacity: 0.16;
+                                                fill: #413D42;
+                                                enable-background: new;
+                                            }
+
+                                            .st3 {
+                                                fill: url(#SVGID_1_);
+                                            }
+                                        </style>
+                                        <g>
+
+                                            <linearGradient id="Tracciato_5359_1_" gradientUnits="userSpaceOnUse"
+                                                x1="10.8672" y1="15.6196" x2="19.304" y2="3.455"
+                                                gradientTransform="matrix(1 0 0 -1 0 23.89)">
+                                                <stop offset="0" style="stop-color:#F0B90B" />
+                                                <stop offset="1" style="stop-color:#6F5605" />
+                                            </linearGradient>
+                                            <path id="Tracciato_5359_15_" class="st0" d="M24.9,11.9c-0.1,6.4-5.4,11.6-11.9,11.4C6.6,23.2,1.4,17.9,1.6,11.4S7-0.1,13.4,0
+            S25,5.4,24.9,11.9L24.9,11.9" />
+                                        </g>
+                                        <g>
+                                            <polygon class="st1" points="18,9.3 16.3,8.4 13.4,10 10.5,8.4 8.8,9.3 8.8,11.3 11.7,12.9 11.7,16.3 13.4,17.3 15.1,16.3 
+            15.1,12.9 18,11.3 	" />
+                                            <polygon class="st1"
+                                                points="19.2,8.6 19.2,10.7 20.8,9.6 20.8,7.6 19.1,6.7 17.4,7.6 	" />
+                                            <polygon class="st1"
+                                                points="19.1,12 19.1,15.3 16.2,17 16.2,19.1 20.8,16.4 20.8,11 	" />
+                                            <polygon class="st1" points="17.9,14.7 17.9,12.7 16.2,13.6 16.2,15.7 	" />
+                                            <polygon class="st1"
+                                                points="13.3,5.3 16.2,6.9 17.9,5.9 13.3,3.3 8.8,5.9 10.5,6.9 	" />
+                                            <polygon class="st1"
+                                                points="7.5,8.6 9.2,7.6 7.6,6.7 5.9,7.6 5.9,9.6 7.5,10.7 	" />
+                                            <polygon class="st1"
+                                                points="7.6,12 5.8,11 5.8,16.4 10.5,19.1 10.5,17 7.6,15.3 	" />
+                                            <polygon class="st1" points="13.3,8.7 13.3,8.7 13.3,8.7 15.1,7.7 13.3,6.7 13.3,6.7 13.3,6.7 13.3,6.7 13.3,6.7 11.6,7.7 
+            13.3,8.7 	" />
+                                            <polygon class="st1" points="10.4,13.6 8.7,12.7 8.7,14.7 10.4,15.7 	" />
+                                            <polygon class="st1"
+                                                points="11.6,17.6 11.6,19.7 13.3,20.7 15,19.7 15,17.6 13.3,18.6 	" />
+                                        </g>
+                                        <g>
+                                            <path class="st2" d="M24.4,8.5C20.6,13.3,11.3,19.1,6.3,21c0,0,1.6,1.1,1.5,1l-6.9,1.8c0.2,0.1,0.6,0.3,1.5,0.3s2.2-0.2,4.3-1
+            c2.2-0.9,5-2.3,7.8-3.9c3.9-2.4,8.5-5.7,11.3-8.8L24.4,8.5z" />
+                                            <g>
+
+                                                <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse"
+                                                    x1="18.2986" y1="6.3493" x2="12.4247" y2="12.9574"
+                                                    gradientTransform="matrix(1 0 0 -1 0 23.89)">
+                                                    <stop offset="0" style="stop-color:#FFC743" />
+                                                    <stop offset="0.5279" style="stop-color:#FCEAC7" />
+                                                    <stop offset="1" style="stop-color:#E3A36E" />
                                                 </linearGradient>
-                                                <path class="st3" d="M22.4,4.5c0.6-0.2,1.2-0.4,1.8-0.5c1.6-0.3,2.3,0,2.4,0.2c0,0.1,0.4,0.7-0.9,3.1C22.9,12.4,10,20.7,4,22.1
-				c-1.2,0.3-1.7,0.2-1.8,0.1c0-0.1,0-0.5,0.5-1.5c0.4-0.7,0.7-1.4,1.2-2.1l-1.2-2.1l-0.5,0.8c-0.6,0.8-1,1.6-1.4,2.4
-				c-1.4,2.9-0.3,4,0.5,4.4c0.2,0.1,0.6,0.3,1.5,0.3c0.9,0,2.2-0.2,4.3-1c2.2-0.9,5-2.3,7.8-3.9c4.9-3,10.9-7.5,12.9-11.2
-				C29,5.9,29.2,4.2,28.4,3c-0.8-1.1-2.3-1.5-4.6-1.1c-1,0.2-2.1,0.5-3,0.9C20.8,2.8,21.8,3.8,22.4,4.5" />
+                                                <path class="st3" d="M22.4,4.5C23,4.3,23.6,4.1,24.2,4c1.6-0.3,2.3,0,2.4,0.2c0,0.1,0.4,0.7-0.9,3.1C22.9,12.4,10,20.7,4,22.1
+                c-1.2,0.3-1.7,0.2-1.8,0.1c0-0.1,0-0.5,0.5-1.5c0.4-0.7,0.7-1.4,1.2-2.1l-1.2-2.1l-0.5,0.8c-0.6,0.8-1,1.6-1.4,2.4
+                c-1.4,2.9-0.3,4,0.5,4.4c0.2,0.1,0.6,0.3,1.5,0.3s2.2-0.2,4.3-1c2.2-0.9,5-2.3,7.8-3.9c4.9-3,10.9-7.5,12.9-11.2
+                C29,5.9,29.2,4.2,28.4,3c-0.8-1.1-2.3-1.5-4.6-1.1c-1,0.2-2.1,0.5-3,0.9C20.8,2.8,21.8,3.8,22.4,4.5" />
                                             </g>
                                             <path class="st2"
                                                 d="M3.2,19.8c0,0-0.9-0.9-1.4-1.9l0.9-1.3c0,0,0.7,1.3,1.3,2L3.2,19.8z" />
                                             <path class="st2"
                                                 d="M20.8,2.8c0,0,1.2,1.1,1.6,1.7l0.2-0.1c0,0-0.6-1-1.4-1.8C21.2,2.6,21.1,2.6,20.8,2.8z" />
                                         </g>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="text-sm text-center flex items-center" style="color:rgba(143, 156, 210, 1);">PoW
-                            </div>
-                        </div>
-                        <div style="background: rgba(48, 49, 78, 0.67); z-index: 0;"
-                            class="flex items-center rounded relative py-2 h-[230px] rounded-xl">
-                            <div class="absolute flex justify-center items-center"
-                                style="z-index : -1; width: 100%; height: 100%;">
-                                <img src="./assets/image/ico/Ellipse 42 (1).png" alt="">
-                            </div>
-                            <div class="w-[100%] h-[100%]"
-                                style="  display: flex; flex-direction: column; justify-content: space-around;">
-                                <div class="px-3">
-                                    <p class="text-white">Bitcoin Dominance</p>
-                                    <span style="color: rgba(143, 156, 210, 1);">40.01%</span>
-                                    <span class="text-xs" style="color: rgba(131, 251, 179, 1);">+1,10%</span>
+                                    </svg>
                                 </div>
-                                <div style="background-color: #101929; opacity: 90%; border: 4px solid black;"
-                                    class="w-[100%] px-3">
-                                    <p class="text-white">Energy Consumption</p>
-                                    <img src="./assets/image/-high 1.png" alt="">
-                                </div>
-                                <div class="px-3">
-                                    <p class="text-white">24h Transaction</p>
-                                    <span style="color: rgba(143, 156, 210, 1);" class="text-sm">343,565$</span><span
-                                        style="color: rgba(131, 251, 179, 1);" class="text-xs">+0.17%</span>
+                                <div class="text-sm text-center flex items-center"
+                                    style="color:rgba(143, 156, 210, 1);">
+                                    PoSa
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- -----------Ethereum-------- -->
-
-                    <div class="bg-black py-1.5 px-5 h-[305px] ">
-                        <div class="flex justify-between my-2.5">
-                            <div><img src="./assets/image/ether.png" alt=""></div>
-                            <div class="text-sm text-center flex items-center" style="color:rgba(143, 156, 210, 1);">PoS
-                            </div>
-                        </div>
-                        <div style="background: rgba(48, 49, 78, 0.67); z-index: 0;"
-                            class="flex items-center rounded relative py-2 h-[230px] rounded-xl">
-                            <div class="absolute flex justify-center items-center"
-                                style="z-index : -1; width: 100%; height: 100%;">
-                                <img src="./assets/image/ether1.png" alt="">
-                            </div>
-                            <div class="w-[100%] h-[100%]"
-                                style="  display: flex; flex-direction: column; justify-content: space-around;">
-                                <div class="px-3">
-                                    <p class="text-white">Ethereum Dominance</p>
-                                    <span style="color: rgba(143, 156, 210, 1);">9.24%</span>
-                                    <span class="text-xs" style="color: rgba(131, 251, 179, 1);">+1,10%</span>
+                            <div style="background: rgba(48, 49, 78, 0.67); z-index: 0;"
+                                class="flex items-center rounded relative py-2 h-[230px] rounded-xl">
+                                <div class="absolute flex justify-center items-center"
+                                    style="z-index : -1; width: 100%; height: 100%;">
+                                    <img src="./assets/image/ico/Ellipse 42 (3).png" alt="">
                                 </div>
-                                <div style="background-color: #101929; opacity: 90%; border: 4px solid black;"
-                                    class="w-[100%] px-3">
-                                    <p class="text-white">Energy Consumption</p>
-                                    <img src="./assets/image/-high 1.png" alt="">
-                                </div>
-                                <div class="px-3">
-                                    <p class="text-white">TVL</p>
-                                    <span style="color: rgba(143, 156, 210, 1);" class="text-sm">33,565,898,112$</span><span
-                                        style="color: rgba(131, 251, 179, 1);" class="text-xs">+0.17%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- -----------BNB-------- -->
-
-                    <div class="bg-black py-1.5 px-5 h-[305px] ">
-                        <div class="flex justify-between my-2.5">
-                            <div>
-                                <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28.9px"
-                                    height="24.5px" viewBox="0 0 28.9 24.5" style="enable-background:new 0 0 28.9 24.5;"
-                                    xml:space="preserve">
-                                    <style type="text/css">
-                                        .st0 {
-                                            fill: url(#Tracciato_5359_1_);
-                                        }
-
-                                        .st1 {
-                                            fill: #FFFFFF;
-                                        }
-
-                                        .st2 {
-                                            opacity: 0.16;
-                                            fill: #413D42;
-                                            enable-background: new;
-                                        }
-
-                                        .st3 {
-                                            fill: url(#SVGID_1_);
-                                        }
-                                    </style>
-                                    <g>
-
-                                        <linearGradient id="Tracciato_5359_1_" gradientUnits="userSpaceOnUse"
-                                            x1="10.8672" y1="15.6196" x2="19.304" y2="3.455"
-                                            gradientTransform="matrix(1 0 0 -1 0 23.89)">
-                                            <stop offset="0" style="stop-color:#F0B90B" />
-                                            <stop offset="1" style="stop-color:#6F5605" />
-                                        </linearGradient>
-                                        <path id="Tracciato_5359_15_" class="st0" d="M24.9,11.9c-0.1,6.4-5.4,11.6-11.9,11.4C6.6,23.2,1.4,17.9,1.6,11.4S7-0.1,13.4,0
-		S25,5.4,24.9,11.9L24.9,11.9" />
-                                    </g>
-                                    <g>
-                                        <polygon class="st1" points="18,9.3 16.3,8.4 13.4,10 10.5,8.4 8.8,9.3 8.8,11.3 11.7,12.9 11.7,16.3 13.4,17.3 15.1,16.3 
-		15.1,12.9 18,11.3 	" />
-                                        <polygon class="st1"
-                                            points="19.2,8.6 19.2,10.7 20.8,9.6 20.8,7.6 19.1,6.7 17.4,7.6 	" />
-                                        <polygon class="st1"
-                                            points="19.1,12 19.1,15.3 16.2,17 16.2,19.1 20.8,16.4 20.8,11 	" />
-                                        <polygon class="st1" points="17.9,14.7 17.9,12.7 16.2,13.6 16.2,15.7 	" />
-                                        <polygon class="st1"
-                                            points="13.3,5.3 16.2,6.9 17.9,5.9 13.3,3.3 8.8,5.9 10.5,6.9 	" />
-                                        <polygon class="st1"
-                                            points="7.5,8.6 9.2,7.6 7.6,6.7 5.9,7.6 5.9,9.6 7.5,10.7 	" />
-                                        <polygon class="st1"
-                                            points="7.6,12 5.8,11 5.8,16.4 10.5,19.1 10.5,17 7.6,15.3 	" />
-                                        <polygon class="st1" points="13.3,8.7 13.3,8.7 13.3,8.7 15.1,7.7 13.3,6.7 13.3,6.7 13.3,6.7 13.3,6.7 13.3,6.7 11.6,7.7 
-		13.3,8.7 	" />
-                                        <polygon class="st1" points="10.4,13.6 8.7,12.7 8.7,14.7 10.4,15.7 	" />
-                                        <polygon class="st1"
-                                            points="11.6,17.6 11.6,19.7 13.3,20.7 15,19.7 15,17.6 13.3,18.6 	" />
-                                    </g>
-                                    <g>
-                                        <path class="st2" d="M24.4,8.5C20.6,13.3,11.3,19.1,6.3,21c0,0,1.6,1.1,1.5,1l-6.9,1.8c0.2,0.1,0.6,0.3,1.5,0.3s2.2-0.2,4.3-1
-		c2.2-0.9,5-2.3,7.8-3.9c3.9-2.4,8.5-5.7,11.3-8.8L24.4,8.5z" />
-                                        <g>
-
-                                            <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="18.2986"
-                                                y1="6.3493" x2="12.4247" y2="12.9574"
-                                                gradientTransform="matrix(1 0 0 -1 0 23.89)">
-                                                <stop offset="0" style="stop-color:#FFC743" />
-                                                <stop offset="0.5279" style="stop-color:#FCEAC7" />
-                                                <stop offset="1" style="stop-color:#E3A36E" />
-                                            </linearGradient>
-                                            <path class="st3" d="M22.4,4.5C23,4.3,23.6,4.1,24.2,4c1.6-0.3,2.3,0,2.4,0.2c0,0.1,0.4,0.7-0.9,3.1C22.9,12.4,10,20.7,4,22.1
-			c-1.2,0.3-1.7,0.2-1.8,0.1c0-0.1,0-0.5,0.5-1.5c0.4-0.7,0.7-1.4,1.2-2.1l-1.2-2.1l-0.5,0.8c-0.6,0.8-1,1.6-1.4,2.4
-			c-1.4,2.9-0.3,4,0.5,4.4c0.2,0.1,0.6,0.3,1.5,0.3s2.2-0.2,4.3-1c2.2-0.9,5-2.3,7.8-3.9c4.9-3,10.9-7.5,12.9-11.2
-			C29,5.9,29.2,4.2,28.4,3c-0.8-1.1-2.3-1.5-4.6-1.1c-1,0.2-2.1,0.5-3,0.9C20.8,2.8,21.8,3.8,22.4,4.5" />
-                                        </g>
-                                        <path class="st2"
-                                            d="M3.2,19.8c0,0-0.9-0.9-1.4-1.9l0.9-1.3c0,0,0.7,1.3,1.3,2L3.2,19.8z" />
-                                        <path class="st2"
-                                            d="M20.8,2.8c0,0,1.2,1.1,1.6,1.7l0.2-0.1c0,0-0.6-1-1.4-1.8C21.2,2.6,21.1,2.6,20.8,2.8z" />
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="text-sm text-center flex items-center" style="color:rgba(143, 156, 210, 1);">
-                                PoSa
-                            </div>
-                        </div>
-                        <div style="background: rgba(48, 49, 78, 0.67); z-index: 0;"
-                            class="flex items-center rounded relative py-2 h-[230px] rounded-xl">
-                            <div class="absolute flex justify-center items-center"
-                                style="z-index : -1; width: 100%; height: 100%;">
-                                <img src="./assets/image/ico/Ellipse 42 (3).png" alt="">
-                            </div>
-                            <div class="w-[100%] h-[100%]"
-                                style="  display: flex; flex-direction: column; justify-content: space-around;">
-                                <div class="px-3">
-                                    <p class="text-white">BNB Dominance</p>
-                                    <span style="color: rgba(143, 156, 210, 1);">2.66%</span>
-                                    <span class="text-xs" style="color: rgba(131, 251, 179, 1);">+1,10%</span>
-                                </div>
-                                <div style="background-color: #101929; opacity: 90%; border: 4px solid black;"
-                                    class="w-[100%] px-3">
-                                    <p class="text-white">Energy Consumption</p>
-                                    <img src="./assets/image/high 1.png" alt="">
-                                </div>
-                                <div class="px-3">
-                                    <p class="text-white">TVL</p>
-                                    <span style="color: rgba(143, 156, 210, 1);" class="text-sm">33,565,898,112$</span><span
-                                        style="color: rgba(131, 251, 179, 1);" class="text-xs">+0.17%</span>
+                                <div class="w-[100%] h-[100%]"
+                                    style="  display: flex; flex-direction: column; justify-content: space-around;">
+                                    <div class="px-3">
+                                        <p class="text-white">BNB Dominance</p>
+                                        <span style="color: rgba(143, 156, 210, 1);">2.66%</span>
+                                        <span class="text-xs" style="color: rgba(131, 251, 179, 1);">+1,10%</span>
+                                    </div>
+                                    <div style="background-color: #101929; opacity: 90%; border: 4px solid black;"
+                                        class="w-[100%] px-3">
+                                        <p class="text-white">Energy Consumption</p>
+                                        <img src="./assets/image/high 1.png" alt="">
+                                    </div>
+                                    <div class="px-3">
+                                        <p class="text-white">TVL</p>
+                                        <span style="color: rgba(143, 156, 210, 1);"
+                                            class="text-sm">33,565,898,112$</span><span
+                                            style="color: rgba(131, 251, 179, 1);" class="text-xs">+0.17%</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-span-5">
-                <div class="" style="height: 305px;">
-                    <div class="grid grid-cols-5 gap-3">
-                        <div class="scroll col-span-3 h-[305px]">
-                            <div class="flex h-[120px] mb-2">
-                                <div class="w-[100%]">
-                                    <img class="w-[100%] h-[100%]" src="./assets/image/ico/Image (1).png" alt="">
+
+                <!-- latest and market -->
+
+                <div class="col-span-5">
+                    <div class="" style="height: 305px;">
+                        <div class="grid grid-cols-5 gap-3">
+                            <div class="col-span-3">
+
+                                <!-- latest news -->
+
+                                <div class="my-5">
+                                    <button class="flex border border-gray-600 rounded py-2 px-2">
+                                        <p class="text-white">Latest News</p>
+                                        <div class="flex items-center justify-center w-[24px] h-[24px]">
+                                            <img src="./assets/image/Icone_Side-Menu/Icon.svg" alt="">
+                                        </div>
+                                    </button>
                                 </div>
-                                <div>
-                                    <div class="flex justify-between">
-                                        <p class="text-white" style="font-size:15px;">Reuters</p>
-                                        <p style="color: rgba(154, 192, 165, 1); font-size: 9px;">neutral</p>
+
+                                <!-- news content -->
+                                <div class=" scroll h-[305px]">
+                                    <div class="flex h-[120px] mb-2">
+                                        <div class="w-[100%]">
+                                            <img class="w-[120px] h-[120px]" src="./assets/image/ico/Image (1).png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <div class="flex justify-between">
+                                                <p class="text-white" style="font-size:15px;">Reuters</p>
+                                                <p style="color: rgba(154, 192, 165, 1); font-size: 9px;">neutral</p>
+                                            </div>
+                                            <div style="color: rgba(135, 149, 207, 1); font-size: 13px;">Binance CEO
+                                                Zhao: Significant interest in crypto industry recovery fund</div>
+                                            <div style="color: rgba(92, 136, 242, 1); font-size: 11px;">Read More</div>
+                                        </div>
                                     </div>
-                                    <div style="color: rgba(135, 149, 207, 1); font-size: 13px;">Binance CEO Zhao: Significant interest in crypto industry recovery fund</div>
-                                    <div style="color: rgba(92, 136, 242, 1); font-size: 11px;">Read More</div>
+                                    <div class="flex h-[120px] mb-2">
+                                        <div class="w-[100%]">
+                                            <img class="w-[120px] h-[120px]" src="./assets/image/ico/Image (2).png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <div class="flex justify-between">
+                                                <p class="text-white" style="font-size:15px;">Reuters</p>
+                                                <p style="color: rgba(154, 192, 165, 1); font-size: 9px;">neutral</p>
+                                            </div>
+                                            <div style="color: rgba(135, 149, 207, 1); font-size: 13px;">Binance CEO
+                                                Zhao: Significant interest in crypto industry recovery fund</div>
+                                            <div style="color: rgba(92, 136, 242, 1); font-size: 11px;">Read More</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex h-[120px] mb-2">
+                                        <div class="w-[100%]">
+                                            <img class="w-[120px] h-[120px]" src="./assets/image/ico/Image (1).png"
+                                                alt="">
+                                        </div>
+                                        <div>
+                                            <div class="flex justify-between">
+                                                <p class="text-white" style="font-size:15px;">Reuters</p>
+                                                <p style="color: rgba(154, 192, 165, 1); font-size: 9px;">neutral</p>
+                                            </div>
+                                            <div style="color: rgba(135, 149, 207, 1); font-size: 13px;">Binance CEO
+                                                Zhao: Significant interest in crypto industry recovery fund</div>
+                                            <div style="color: rgba(92, 136, 242, 1); font-size: 11px;">Read More</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="flex h-[120px] mb-2">
-                                <div class="w-[100%]">
-                                    <img class="w-[100%] h-[100%]" src="./assets/image/ico/Image (2).png" alt="">
+                            <div class="col-span-2">
+
+                                <!-- Market Info -->
+                                <div class="my-5">
+                                    <button class="flex border border-gray-600 rounded py-2 px-2">
+                                        <p class="text-white">Market Info</p>
+                                        <div class="flex items-center justify-center w-[24px] h-[24px]">
+                                            <img src="./assets/image/Icone_Side-Menu/Icon.svg" alt="">
+                                        </div>
+                                    </button>
                                 </div>
-                                <div>
-                                    <div class="flex justify-between">
-                                        <p class="text-white" style="font-size:15px;">Reuters</p>
-                                        <p style="color: rgba(154, 192, 165, 1); font-size: 9px;">neutral</p>
+
+                                <!-- Market Content -->
+                                <div class=" scroll h-[305px]">
+                                    <div class="mb-3"
+                                        style="background-image: url(./assets/image/Frame29.png); background-repeat: no-repeat;">
+                                        <div class="w-[100%]">
+                                            <div class="px-6 py-4">
+                                                <p class="text-white">Market Sentiment</p>
+                                                <p style="color: rgba(255, 255, 255, 0.41);" class="pb-2">fear & gread
+                                                    index</p>
+                                                <span>Extreme fear</span><span>23</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div style="color: rgba(135, 149, 207, 1); font-size: 13px;">Binance CEO Zhao: Significant interest in crypto industry recovery fund</div>
-                                    <div style="color: rgba(92, 136, 242, 1); font-size: 11px;">Read More</div>
-                                </div>
-                            </div>
-                            <div class="flex h-[120px] mb-2">
-                                <div class="w-[100%]">
-                                    <img class="w-[100%] h-[100%]" src="./assets/image/ico/Image (1).png" alt="">
-                                </div>
-                                <div>
-                                    <div class="flex justify-between">
-                                        <p class="text-white" style="font-size:15px;">Reuters</p>
-                                        <p style="color: rgba(154, 192, 165, 1); font-size: 9px;">neutral</p>
+                                    <div class="mb-3"
+                                        style="background-image: url(./assets/image/Frame29.png); background-repeat: no-repeat;">
+                                        <div class="w-[100%]">
+                                            <div class="px-6 py-4">
+                                                <p class="text-white">Market Sentiment</p>
+                                                <p style="color: rgba(255, 255, 255, 0.41);" class="pb-2">fear & gread
+                                                    index</p>
+                                                <span>Extreme fear</span><span>23</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div style="color: rgba(135, 149, 207, 1); font-size: 13px;">Binance CEO Zhao: Significant interest in crypto industry recovery fund</div>
-                                    <div style="color: rgba(92, 136, 242, 1); font-size: 11px;">Read More</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-span-2 scroll h-[305px]">
-                            <div class="mb-3" style="background-image: url(./assets/image/Frame29.png); background-repeat: no-repeat;">
-                                <div class="w-[100%]">
-                                    <div class="px-6 py-4">
-                                        <p class="text-white">Market Sentiment</p>
-                                        <p style="color: rgba(255, 255, 255, 0.41);" class="pb-2">fear & gread index</p>
-                                        <span>Extreme fear</span><span>23</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-3" style="background-image: url(./assets/image/Frame29.png); background-repeat: no-repeat;">
-                                <div class="w-[100%]">
-                                    <div class="px-6 py-4">
-                                        <p class="text-white">Market Sentiment</p>
-                                        <p style="color: rgba(255, 255, 255, 0.41);" class="pb-2">fear & gread index</p>
-                                        <span>Extreme fear</span><span>23</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-3" style="background-image: url(./assets/image/Frame29.png); background-repeat: no-repeat;">
-                                <div class="w-[100%]">
-                                    <div class="px-6 py-4">
-                                        <p class="text-white">Market Sentiment</p>
-                                        <p style="color: rgba(255, 255, 255, 0.41);" class="pb-2">fear & gread index</p>
-                                        <span>Extreme fear</span><span>23</span>
+                                    <div class="mb-3"
+                                        style="background-image: url(./assets/image/Frame29.png); background-repeat: no-repeat;">
+                                        <div class="w-[100%]">
+                                            <div class="px-6 py-4">
+                                                <p class="text-white">Market Sentiment</p>
+                                                <p style="color: rgba(255, 255, 255, 0.41);" class="pb-2">fear & gread
+                                                    index</p>
+                                                <span>Extreme fear</span><span>23</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -661,10 +812,485 @@
                     </div>
                 </div>
             </div>
+
+            <!-- My Favorites -->
+            <div>
+
+                <!-- My Favorite -->
+
+                <div class="my-5">
+                    <button class="flex border border-gray-600 rounded py-2 px-2">
+                        <p class="text-white">My Favorite</p>
+                        <div class="flex items-center justify-center w-[24px] h-[24px]">
+                            <img src="./assets/image/Icone_Side-Menu/Icon.svg" alt="">
+                        </div>
+                    </button>
+                </div>
+                <div id="myFavorites" class="flex scrollx">
+                </div>
+            </div>
+
+            <!-- Coin Ranking -->
+
+            <div>
+                <div class="flex">
+                    <!-- coinranking -->
+                    <div class="my-5">
+                        <div class="flex border border-gray-600 rounded py-2 px-2">
+                            <p class="text-white">Coin Ranking</p>
+                            <div class="flex items-center justify-center w-[24px] ml-1">
+                                <img src="./assets/image/Icone_Side-Menu/Icon.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- filters -->
+                    <div class="my-5 ml-3">
+                        <div class="flex border border-gray-600 rounded py-2 px-2">
+                            <p class="text-white">Filters</p>
+                            <div class="flex items-center justify-center w-[24px] ml-1">
+                                <img src="./assets/image/Icone_Side-Menu/filtericon.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- content -->
+                <div>
+                    <div class="grid grid-cols-9 bg-black py-4">
+                        <p class="text-center text-white">#</p>
+                        <p class="text-center text-white">coin</p>
+                        <p class="text-center text-white">price</p>
+                        <p class="text-center text-white">market cap</p>
+                        <p class="text-center text-white">volume 24H</p>
+                        <p class="text-center text-white">circulating supply</p>
+                        <p class="text-center text-white">RSI</p>
+                        <p class="text-center text-white">24H chart</p>
+                        <p class="text-center text-white">% 24H</p>
+                    </div>
+                    <!-- <div class="grid grid-cols-9 py-4">
+                        <div class="flex justify-around items-center">
+                            <img src="./assets/image/ranking page/Activated Star.svg" alt="">
+                            <p class="text-white">1</p>
+                            <img style="width: 30px; height: 30px;" src="./assets/image/ranking page/Icon BTC.svg" alt="">
+                        </div>
+                        <div class="flex items-center justify-center text-white text-[12px]"><span class="font-[400]">BITCOIN</span><span class="font-[700]">BTC</span></div>
+                        <div class="flex items-center px-3">
+                            <div class="text-end w-[100%]">
+                                <p class="text-white text-[12px]">18,100,102$</p>
+                                <p style="color: rgba(255, 255, 255, 0.41);" class="text-[10px]">1BTC</p>
+                            </div>
+                        </div>
+                        <div class="text-white text-[12px] flex items-center justify-center">349,665,100,102$</div>
+                        <div class="flex items-center px-3">
+                            <div class="text-end w-[100%]">
+                                <p class="text-white text-[12px]">69,665,100,102$</p>
+                                <p style="color: rgba(255, 255, 255, 0.41);" class="text-[10px]">683,297BTC</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="px-3 w-[100%]">
+                                <p class="text-white text-[12px] pb-1">19,576,765 BTC</p>
+                                <div class="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
+                                    <div class="h-1.5 rounded-full dark:bg-blue-500" style="width: 45%; background: #5C5CEA;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-[100%] px-3">
+                                <div class="flex justify-between pb-1">
+                                    <p class="text-white text-[12px]">RSI 24</p>
+                                    <div class="flex items-center">
+                                        <p class="text-[12px]" style="color: #9AA2EA;">44</p>
+                                        <img class=" pl-2" src="./assets/image/ranking page/success.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
+                                    <div class="h-1.5 rounded-full dark:bg-blue-500" style="width: 44%; background: #5C5CEA;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./assets/image/ranking page/Mini-Chart.svg" alt="">
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button class="border border-green-600 rounded flex justify-between items-center p-1">
+                                <img src="./assets/image/ranking page/raise.svg" alt="">
+                                <p class="text-green-600 text-[10px] pl-3">0.15%</p>
+                            </button>
+                        </div>
+                    </div> -->
+                    <div id="coinRanking"></div>
+                </div>
+
+            </div>
+
+            <footer>
+                <div class="py-6 px-16 bg-black">
+                    <div class="grid grid-cols-2">
+                        <div>
+                            <div class="flex">
+                                <img style="height: 60px; width:60px;" src="./assets/image/Logo (1).png" alt="">
+                                <p class="text-white font-medium flex items-center pl-2">coin range</p>
+                            </div>
+                            <div class="flex py-3">
+                                <div>
+                                    <img src="./assets/image/Rectangle 25.png" alt="">
+                                </div>
+                                <div class="pl-3 flex items-center">
+                                    <div>
+                                        <div class="flex pb-2">
+                                            <img src="./assets/image/apple.svg" alt="">
+                                            <img class="pl-3" src="./assets/image/robot.svg" alt="">
+                                        </div>
+                                        <div class="text-white font-medium">Try the brand new CoinRango App on your
+                                            smartphone</div>
+                                        <div class="text-white font-medium" style="opacity:0.3;">Scan to download</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end" style="height: 30px;">
+                            <img src="./assets/image/Icone_Side-Menu/footer social/round-instagram.svg" alt="">
+                            <img class="pl-2" src="./assets/image/Icone_Side-Menu/footer social/round-telegram.svg"
+                                alt="">
+                            <img class="pl-2" src="./assets/image/Icone_Side-Menu/footer social/round-twitter.svg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-5 pt-8">
+                        <div>
+                            <p class="text-white">Products</p>
+                            <div class="text-white" style="opacity: 0.3;">
+                                <p>Exchange</p>
+                                <p>Data Aggregator</p>
+                                <p>My Wallet</p>
+                                <p>Mini Games</p>
+                                <p>Learn</p>
+                                <p>Stake</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-white">Company</p>
+                            <div class="text-white" style="opacity: 0.3;">
+                                <p>About</p>
+                                <p>Press</p>
+                                <p>Disclaimer</p>
+                                <p>Terms of Use</p>
+                                <p>Privacy</p>
+                                <p>Careers</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-white">Resources</p>
+                            <div class="text-white" style="opacity: 0.3;">
+                                <p>Blog</p>
+                                <p>API</p>
+                                <p>Reports</p>
+                                <p>FAQ</p>
+                                <p>Brand Assets</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-white">Developers</p>
+                            <div class="text-white" style="opacity: 0.3;">
+                                <p>Submit a Proect</p>
+                                <p>API</p>
+                                <p>Advertising</p>
+                                <p>Widgets</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-white">Supported Wallet</p>
+                            <div class="text-white" style="opacity: 0.3;">
+                                <p>Metamask</p>
+                                <p>BSC Wallet</p>
+                                <p>Trust Wallet</p>
+                                <p>TokenPocket</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-white text-center pt-4" style="opacity: 0.3;">@ 2020-2022 Coinrango - All rights
+                        reserved</div>
+                </div>
+            </footer>
         </div>
     </div>
 
     <script>
+        const FavoriteItems = [
+            {
+                image: "./assets/image/ico/atom.png",
+                name: "ATOM",
+                price: "7.89$"
+            },
+            {
+                image: "./assets/image/ico/1inch.png",
+                name: "1INCH",
+                price: "0.76$"
+            },
+            {
+                image: "./assets/image/ico/gods.png",
+                name: "GODS",
+                price: "0.0076$"
+            },
+            {
+                image: "./assets/image/ico/elon.png",
+                name: "ELON",
+                price: "0.00000084$"
+            },
+            {
+                image: "./assets/image/ico/move.png",
+                name: "MOVE",
+                price: "0.84$"
+            },
+            {
+                image: "./assets/image/ico/jewel.png",
+                name: "JEWEL",
+                price: "7.89$"
+            },
+            {
+                image: "./assets/image/ico/atom.png",
+                name: "ATOM",
+                price: "7.89$"
+            }
+        ]
+        var myFavorites = "";
+        for (let i = 0; i < FavoriteItems.length; i++) {
+            myFavorites += `<div class="subscrollx mr-2 p-3 grid grid-cols-2" style="width: 230px; background: #242839;"><div><img src=${FavoriteItems[i].image} alt=""></div><div class="flex justify-end"><div class="text-end"><p class="text-white">${FavoriteItems[i].name}</p><p class="text-white">${FavoriteItems[i].price}</p><img src="./assets/image/Vector 8.png" alt=""></div></div></div>`
+        }
+        document.getElementById("myFavorites").innerHTML = myFavorites;
+
+        // coinnavbar
+
+        const coins = [
+            {
+                image: "./assets/image/Icone_Side-Menu/coinnavbar/dash.svg",
+                name: "DASH",
+                price: "44.12$",
+                rate: "+7.33%"
+            },
+            {
+                image: "./assets/image/Icone_Side-Menu/coinnavbar/doge.svg",
+                name: "DOGE",
+                price: "0.65$",
+                rate: "+7.17%"
+            },
+            {
+                image: "./assets/image/Icone_Side-Menu/coinnavbar/ergo.svg",
+                name: "ERGO",
+                price: "4.12$",
+                rate: "+7.06%"
+            },
+            {
+                image: "./assets/image/Icone_Side-Menu/coinnavbar/enj.svg",
+                name: "ENJ",
+                price: "0.12$",
+                rate: "+6.13%"
+            },
+            {
+                image: "./assets/image/Icone_Side-Menu/coinnavbar/fil.svg",
+                name: "FIL",
+                price: "6.36$",
+                rate: "+6.01%"
+            },
+            {
+                image: "./assets/image/Icone_Side-Menu/coinnavbar/floki.svg",
+                name: "FLOKI",
+                price: "0.000756$",
+                rate: "+4.37%"
+            },
+            {
+                image: "./assets/image/Icone_Side-Menu/coinnavbar/pyr.svg",
+                name: "PYR",
+                price: "1.53$",
+                rate: "+4.18%"
+            },
+            {
+                image: "./assets/image/Icone_Side-Menu/coinnavbar/rfox.svg",
+                name: "ROFX",
+                price: "0.12$",
+                rate: "+3.88%"
+            },
+            {
+                image: "./assets/image/Icone_Side-Menu/coinnavbar/ewt.svg",
+                name: "EWT",
+                price: "0.000756$",
+                rate: "+4.37%"
+            }
+        ]
+        var coinNavbar = "";
+        for (let i = 0; i < coins.length; i++) {
+            coinNavbar += `<div class="subscrollx flex justify-around items-center" style="min-width: 180px;">
+                <img src=${coins[i].image} alt="">
+                <p class="text-white font-medium navname">${coins[i].name}</p>
+                <p class="text-white navprice">${coins[i].price}</p>
+                <p class="navrate">${coins[i].rate}</p>
+            </div>`;
+        }
+        document.getElementById("coinnavbar").innerHTML = coinNavbar;
+
+
+        const coinrankings = [
+            {
+                coinicon : "./assets/image/rankingpage/IconBTC.svg",
+                activestate : "./assets/image/rankingpage/ActivatedStar.svg",
+                coin: "BITCOIN",
+                coinshort: "BTC",
+                price: "18,100,102$",
+                Btcprice: "1",
+                cap: "349,665,100,102$",
+                volume: "349,665,100,102$",
+                volume1: "683.297",
+                supply: "19,576,765BTC",
+                rsi: "44",
+                rsistate: "success",
+                chart : "./assets/image/rankingpage/Mini-Chart.svg",
+                percent : "0.15%",
+                percentstate : "success"
+            },
+            {
+                coinicon : "./assets/image/rankingpage/IconETH.svg",
+                activestate : "./assets/image/rankingpage/DeactivatedStar.svg",
+                coin: "BITCOIN",
+                coinshort: "BTC",
+                price: "18,100,102$",
+                Btcprice: "1",
+                cap: "349,665,100,102$",
+                volume: "349,665,100,102$",
+                volume1: "683.297",
+                supply: "19,576,765BTC",
+                rsi: "44",
+                rsistate: "success",
+                chart : "./assets/image/rankingpage/Mini-Chart-bad.svg",
+                percent : "0.15%",
+                percentstate : "success"
+            },
+            {
+                coinicon : "./assets/image/rankingpage/IconBNB.svg",
+                activestate : "./assets/image/rankingpage/ActivatedStar.svg",
+                coin: "BITCOIN",
+                coinshort: "BTC",
+                price: "18,100,102$",
+                Btcprice: "1",
+                cap: "349,665,100,102$",
+                volume: "349,665,100,102$",
+                volume1: "683.297",
+                supply: "19,576,765BTC",
+                rsi: "44",
+                rsistate: "success",
+                chart : "./assets/image/rankingpage/Mini-Chart.svg",
+                percent : "0.15%",
+                percentstate : "success"
+            },
+            {
+                coinicon : "./assets/image/rankingpage/IconUSDC.svg",
+                activestate : "./assets/image/rankingpage/DeactivatedStar.svg",
+                coin: "BITCOIN",
+                coinshort: "BTC",
+                price: "18,100,102$",
+                Btcprice: "1",
+                cap: "349,665,100,102$",
+                volume: "349,665,100,102$",
+                volume1: "683.297",
+                supply: "19,576,765BTC",
+                rsi: "44",
+                rsistate: "success",
+                chart : "./assets/image/rankingpage/Mini-Chart-bad.svg",
+                percent : "0.15%",
+                percentstate : "success"
+            },
+            {
+                coinicon : "./assets/image/rankingpage/IconXRP.svg",
+                activestate : "./assets/image/rankingpage/DeactivatedStar.svg",
+                coin: "BITCOIN",
+                coinshort: "BTC",
+                price: "18,100,102$",
+                Btcprice: "1",
+                cap: "349,665,100,102$",
+                volume: "349,665,100,102$",
+                volume1: "683.297",
+                supply: "19,576,765BTC",
+                rsi: "44",
+                rsistate: "success",
+                chart : "./assets/image/rankingpage/Mini-Chart-bad.svg",
+                percent : "0.15%",
+                percentstate : "success"
+            },
+            {
+                coinicon : "./assets/image/rankingpage/IconSOL.svg",
+                activestate : "./assets/image/rankingpage/DeactivatedStar.svg",
+                coin: "BITCOIN",
+                coinshort: "BTC",
+                price: "18,100,102$",
+                Btcprice: "1",
+                cap: "349,665,100,102$",
+                volume: "349,665,100,102$",
+                volume1: "683.297",
+                supply: "19,576,765BTC",
+                rsi: "44",
+                rsistate: "success",
+                chart : "./assets/image/rankingpage/Mini-Chart-bad.svg",
+                percent : "0.15%",
+                percentstate : "success"
+            }
+        ]
+        var coinRanking = "";
+        for (let i = 0; i < coinrankings.length; i++) {
+            coinRanking += `<div class="grid grid-cols-9 py-4">
+                        <div class="flex justify-around items-center">
+                            <img src=${coinrankings[i].activestate} alt="">
+                            <p class="text-white">${i+1}</p>
+                            <img style="width: 30px; height: 30px;" src=${coinrankings[i].coinicon} alt="">
+                        </div>
+                        <div class="flex items-center justify-center text-white text-[12px]"><span class="font-[400]">${coinrankings[i].coin}</span><span class="font-[700]">${coinrankings[i].coinshort}</span></div>
+                        <div class="flex items-center px-3">
+                            <div class="text-end w-[100%]">
+                                <p class="text-white text-[12px]">${coinrankings[i].price}</p>
+                                <p style="color: rgba(255, 255, 255, 0.41);" class="text-[10px]">${coinrankings[i].Btcprice}BTC</p>
+                            </div>
+                        </div>
+                        <div class="text-white text-[12px] flex items-center justify-center">${coinrankings[i].cap}</div>
+                        <div class="flex items-center px-3">
+                            <div class="text-end w-[100%]">
+                                <p class="text-white text-[12px]">${coinrankings[i].volume}</p>
+                                <p style="color: rgba(255, 255, 255, 0.41);" class="text-[10px]">${coinrankings[i].volume1}</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="px-3 w-[100%]">
+                                <p class="text-white text-[12px] pb-1">${coinrankings[i].supply}</p>
+                                <div class="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
+                                    <div class="h-1.5 rounded-full dark:bg-blue-500" style="width: 45%; background: #5C5CEA;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-[100%] px-3">
+                                <div class="flex justify-between pb-1">
+                                    <p class="text-white text-[12px]">RSI 24</p>
+                                    <div class="flex items-center">
+                                        <p class="text-[12px]" style="color: #9AA2EA;">${coinrankings[i].rsi}</p>
+                                        <img class=" pl-2" src="./assets/image/rankingpage/success.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
+                                    <div class="h-1.5 rounded-full dark:bg-blue-500" style="width: 44%; background: #5C5CEA;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <img src=${coinrankings[i].chart} alt="">
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button class="border border-green-600 rounded flex justify-between items-center p-1">
+                                <img src="./assets/image/rankingpage/raise.svg" alt="">
+                                <p class="text-green-600 text-[10px] pl-3">0.15%</p>
+                            </button>
+                        </div>
+                    </div>`;
+        }
+        document.getElementById("coinRanking").innerHTML = coinRanking;
+
         var flag = false;
         if (!flag) {
             document.getElementById("mySidebar").style.width = "280px";
@@ -755,7 +1381,7 @@
                 document.getElementById("subranking").style.display = "block";
                 document.getElementById("subdashboard").style.display = "none";
             }
-            else if(sidebarName == "dashboard") {
+            else if (sidebarName == "dashboard") {
                 document.getElementById("subranking").style.display = "none";
                 document.getElementById("subdashboard").style.display = "block";
             }
