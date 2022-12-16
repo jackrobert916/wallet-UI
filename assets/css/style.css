@@ -508,6 +508,14 @@ p {
     height: 1.25rem;
 }
 
+.w-5 {
+    width: 1.5rem;
+}
+
+.h-5 {
+    height: 1.5rem;
+}
+
 .w-120 {
     width: 120px;
 }
@@ -617,10 +625,9 @@ p {
 
 .loginmodal {
     position: absolute;
-    bottom: -250px;
-    left: 0px;
-    width: 250px;
-    display: none;
+    bottom: -280px;
+    left: -20px;
+    width: 230px;
     padding: 0.75rem 1.5rem;
 }
 
@@ -827,12 +834,12 @@ p {
 }
 
 .subnews {
-    margin-right: 0.5rem;
+    margin-right: 0rem;
 }
 
 @media screen and (max-width : 1400px) {
     .subnews {
-        margin-right: 0rem;
+        margin-right: 0.5rem;
     }
 }
 
