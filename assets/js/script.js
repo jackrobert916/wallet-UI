@@ -37,7 +37,7 @@ const FavoriteItems = [
 ]
 var myFavorites = "";
 for (let i = 0; i < FavoriteItems.length; i++) {
-    myFavorites += `<div class="subscrollx mr-2 p-3 grid grid-cols-2" style="width: 230px; background: #242839;"><div><img src=${FavoriteItems[i].image} alt=""></div><div class="flex justify-end"><div class="text-end"><p class="text-white text-[15px] font-[400]">${FavoriteItems[i].name}</p><p class="text-white text-[13px] font-[700]">${FavoriteItems[i].price}</p><img src="./assets/image/Vector 8.png" alt=""></div></div></div>`
+    myFavorites += `<div class="subscrollx mr-2 p-3 grid grid-cols-2" style="width: 230px; background: #242839;"><div class="items-center"><img src=${FavoriteItems[i].image} alt=""></div><div class="flex justify-end"><div class="text-end"><span class="text-white" style="font-size : 15px; font-weight:400;">${FavoriteItems[i].name}</span><p class="text-white" style="font-size : 13px; font-weight:400;">${FavoriteItems[i].price}</p><img src="./assets/image/Vector 8.png" alt=""></div></div></div>`
 }
 document.getElementById("myFavorites").innerHTML = myFavorites;
 
@@ -101,11 +101,11 @@ const coins = [
 ]
 var coinNavbar = "";
 for (let i = 0; i < coins.length; i++) {
-    coinNavbar += `<div class="subscrollx flex justify-around items-center" style="min-width: 180px;">
+    coinNavbar += `<div class="subscrollx items-center-around" style="min-width: 180px;">
         <img src=${coins[i].image} alt="">
-        <p class="text-white text-[15px] font-[700] navname">${coins[i].name}</p>
-        <p class="text-white text-[11px] font-[400] navprice">${coins[i].price}</p>
-        <p class="navrate">${coins[i].rate}</p>
+        <span class="text-white navname" style="font-size: 15px; font-weight: 700;">${coins[i].name}</span><br>
+        <span class="text-white navprice" style="font-size: 11px; font-weight: 400;">${coins[i].price}</span><br>
+        <span class="navrate">${coins[i].rate}</span>
     </div>`;
 }
 document.getElementById("coinnavbar").innerHTML = coinNavbar;
@@ -216,9 +216,9 @@ const coinrankings = [
     }
 ]
 var coinRankingmenu = "";
-coinRankingmenu += `<div class="justify-center text-white bg-black w-[150px] h-[50px] flex items-center"><span>#</span></div>`;
+coinRankingmenu += `<div class="justify-align-center text-white bg-black w-150 h-50"><span>#</span></div>`;
 for (let i = 0; i < coinrankings.length; i++) {
-    coinRankingmenu += `<div class="flex justify-around items-center w-[150px] h-[80px]">
+    coinRankingmenu += `<div class="items-center-around w-150 h-80">
                     <img src=${coinrankings[i].activestate} alt="">
                     <p class="text-white">${i + 1}</p>
                     <img style="width: 30px; height: 30px;" src=${coinrankings[i].coinicon} alt="">
@@ -227,51 +227,51 @@ for (let i = 0; i < coinrankings.length; i++) {
 document.getElementById("coinRankingmenu").innerHTML = coinRankingmenu;
 
 var coin = "";
-coin += `<div class="justify-center text-white bg-black w-[150px] h-[50px] flex items-center">coin</div>`;
+coin += `<div class="justify-align-center text-white bg-black w-150 h-50">coin</div>`;
 for (let i = 0; i < coinrankings.length; i++) {
-    coin += `<div class="flex items-center justify-center text-white text-[12px] w-[150px] h-[80px]"><span class="font-[400]">${coinrankings[i].coin}</span><span class="font-[700]">${coinrankings[i].coinshort}</span></div>`;
+    coin += `<div class="justify-align-center text-white font-12 w-150 h-80"><span class="font-400">${coinrankings[i].coin}</span><span class="font-700">${coinrankings[i].coinshort}</span></div>`;
 }
 document.getElementById("coin").innerHTML = coin;
 
 var price = "";
-price += `<div class="justify-center text-white bg-black w-[150px] h-[50px] flex items-center">price</div>`;
+price += `<div class="justify-align-center text-white bg-black w-150 h-50">price</div>`;
 for (let i = 0; i < coinrankings.length; i++) {
-    price += `<div class="flex items-center px-3 w-[150px] h-[80px]">
-                    <div class="text-end w-[100%]">
-                        <p class="text-white text-[15px]">${coinrankings[i].price}</p>
-                        <p style="color: rgba(255, 255, 255, 0.41);" class="text-[13px]">${coinrankings[i].Btcprice}BTC</p>
+    price += `<div class="items-center w-150 h-80">
+                    <div class="text-end px-3 w-full">
+                        <p class="text-white font-15">${coinrankings[i].price}</p>
+                        <p style="color: rgba(255, 255, 255, 0.41);" class="text-13">${coinrankings[i].Btcprice}BTC</p>
                     </div>
                 </div>`;
 }
 document.getElementById("price").innerHTML = price;
 
 var cap = "";
-cap += `<div class="justify-center text-white bg-black w-[150px] h-[50px] flex items-center">market cap</div>`;
+cap += `<div class="justify-align-center text-white bg-black w-150 h-50">market cap</div>`;
 for (let i = 0; i < coinrankings.length; i++) {
-    cap += `<div class="text-white text-[15px] flex items-center justify-center w-[150px] h-[80px]">${coinrankings[i].cap}</div>`;
+    cap += `<div class="text-white font-15 justify-align-center w-150 h-80">${coinrankings[i].cap}</div>`;
 }
 document.getElementById("cap").innerHTML = cap;
 
 var volume = "";
-volume += `<div class="justify-center text-white bg-black w-[150px] h-[50px] flex items-center">volume 24H</div>`;
+volume += `<div class="justify-align-center text-white bg-black w-150 h-50">volume 24H</div>`;
 for (let i = 0; i < coinrankings.length; i++) {
-    volume += `<div class="flex items-center px-3 w-[150px] h-[80px]">
-                    <div class="text-end w-[100%]">
-                        <p class="text-white text-[15px]">${coinrankings[i].volume}</p>
-                        <p style="color: rgba(255, 255, 255, 0.41);" class="text-[12px]">${coinrankings[i].volume1}</p>
+    volume += `<div class="items-center w-150 h-80">
+                    <div class="text-end px-3 w-full">
+                        <p class="text-white font-15">${coinrankings[i].volume}</p>
+                        <p style="color: rgba(255, 255, 255, 0.41);" class="font-12">${coinrankings[i].volume1}</p>
                     </div>
                 </div>`;
 }
 document.getElementById("volume").innerHTML = volume;
 
 var supply = "";
-supply += `<div class="justify-center text-white bg-black w-[150px] h-[50px] flex items-center">circulating supply</div>`;
+supply += `<div class="justify-align-center text-white bg-black w-150 h-50">circulating supply</div>`;
 for (let i = 0; i < coinrankings.length; i++) {
-    supply += `<div class="flex items-center w-[150px] h-[80px]">
-                    <div class="px-3 w-[100%]">
-                        <p class="text-white text-[15px] pb-1">${coinrankings[i].supply}</p>
-                        <div class="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
-                            <div class="h-1.5 rounded-full dark:bg-blue-500" style="width: 45%; background: #5C5CEA;"></div>
+    supply += `<div class="items-center w-150 h-80">
+                    <div class="px-3 w-full">
+                        <p class="text-white font-15 pb-1">${coinrankings[i].supply}</p>
+                        <div class="w-full bg-gray-200 rounded-full h-15 dark:bg-gray-700">
+                            <div class="h-15 rounded-full dark:bg-blue-500" style="width: 45%; background: #5C5CEA;"></div>
                         </div>
                     </div>
                 </div>`;
@@ -279,22 +279,22 @@ for (let i = 0; i < coinrankings.length; i++) {
 document.getElementById("supply").innerHTML = supply;
 
 var rsi = "";
-rsi += `<div class="relative justify-center text-white bg-black w-[150px] h-[50px] flex items-center">
+rsi += `<div class="relative justify-align-center text-white bg-black w-150 h-50">
     <p>RSI</p>
-    <div class="absolute bottom-[-10px]"><div class="text-white text-[13px] px-3 py-0.5 rounded font-[700]" style="background : linear-gradient(70.83deg, #7B08D6 11.16%, #3687FF 80.51%);">NEW</div></div>
+    <div class="absolute bottom-10"><div class="text-white text-13 px-3 py-05 rounded font-700" style="background : linear-gradient(70.83deg, #7B08D6 11.16%, #3687FF 80.51%);">NEW</div></div>
     </div>`;
 for (let i = 0; i < coinrankings.length; i++) {
-    rsi += `<div class="flex items-center w-[150px] h-[80px]">
-                    <div class="w-[100%] px-3">
-                        <div class="flex justify-between pb-1">
-                            <p class="text-white text-[15px]">RSI 24</p>
-                            <div class="flex items-center">
-                                <p class="text-[15px]" style="color: #9AA2EA;">${coinrankings[i].rsi}</p>
+    rsi += `<div class="items-center w-150 h-80">
+                    <div class="w-full px-3">
+                        <div class="justify-between pb-1">
+                            <p class="text-white font-15">RSI 24</p>
+                            <div class="items-center">
+                                <p class="font-15" style="color: #9AA2EA;">${coinrankings[i].rsi}</p>
                                 <img class=" pl-2" src="./assets/image/rankingpage/success.svg" alt="">
                             </div>
                         </div>
-                        <div class="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
-                            <div class="h-1.5 rounded-full dark:bg-blue-500" style="width: 44%; background: #5C5CEA;"></div>
+                        <div class="w-full bg-gray-200 rounded-full h-15">
+                            <div class="h-15 rounded-full" style="width: 44%; background: #5C5CEA;"></div>
                         </div>
                     </div>
                 </div>`;
@@ -302,31 +302,31 @@ for (let i = 0; i < coinrankings.length; i++) {
 document.getElementById("rsi").innerHTML = rsi;
 
 var chart = "";
-chart += `<div class="justify-center text-white bg-black w-[150px] h-[50px] flex items-center">24H chart</div>`;
+chart += `<div class="justify-align-center text-white bg-black w-150 h-50">24H chart</div>`;
 for (let i = 0; i < coinrankings.length; i++) {
-    chart += `<div><img src=${coinrankings[i].chart} alt="" class=" w-[150px] h-[80px]"></div>`;
+    chart += `<div><img src=${coinrankings[i].chart} alt="" class=" w-150 h-80"></div>`;
 }
 document.getElementById("chart").innerHTML = chart;
 
 var percent = "";
-percent += `<div class="justify-center text-white bg-black w-[150px] h-[50px] flex items-center">% 24H</div>`;
+percent += `<div class="justify-align-center text-white bg-black w-150 h-50">% 24H</div>`;
 for (let i = 0; i < coinrankings.length; i++) {
-    percent += `<div class="flex items-center justify-center w-[150px] h-[80px]">
-                    <button class="border border-green-600 rounded flex justify-between items-center p-1">
+    percent += `<div class="justify-align-center w-150 h-80">
+                    <button class="border-green-600 rounded justify-between-align-center p-1">
                         <img src="./assets/image/rankingpage/raise.svg" alt="">
-                        <p class="text-green-600 text-[10px] pl-3">0.15%</p>
+                        <span class="text-green-600 text-10 pl-3">0.15%</span>
                     </button>
                 </div>`;
 }
 document.getElementById("percent").innerHTML = percent;
 
 var market = "";
-market += `<div class="justify-center text-white bg-black w-[150px] h-[50px] flex items-center">Market DOM</div>`;
+market += `<div class="justify-align-center text-white bg-black w-150 h-50">Market DOM</div>`;
 for (let i = 0; i < coinrankings.length; i++) {
-    market += `<div class="flex items-center justify-center w-[150px] h-[80px]">
-                    <button class="border border-green-600 rounded flex justify-between items-center p-1">
+    market += `<div class="justify-align-center w-150 h-80">
+                    <button class="border-green-600 rounded justify-between-align-center p-1">
                         <img src="./assets/image/rankingpage/raise.svg" alt="">
-                        <p class="text-green-600 text-[10px] pl-3">0.15%</p>
+                        <span class="text-green-600 text-10 pl-3">0.15%</span>
                     </button>
                 </div>`;
 }
@@ -478,7 +478,7 @@ function filter() {
 }
 
 window.addEventListener('resize', function() {
-    if (window.innerWidth < 1023) {
+    if (window.innerWidth < 992) {
       document.getElementById("main").style.marginLeft = "0px";
     }
     else{

@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/css/customize.css"></script>
+    <!-- <script src="./assets/css/customize.css"></script> -->
 </head>
 
-<body>
+<body style="margin: 0px !important;">
 
-    <div id="mySidebar" class="sidebar hidden lg:block">
+    <div id="mySidebar" class="sidebar side">
         <div>
-            <div class="menu flex justify-between" href="#">
+            <div class="menu justify-between" href="#">
                 <img src="assets/image/Icone_Side-Menu/Menu_icon_01.svg" style="width: 30px; height : 30px;"
                     onclick="closeNav()" alt="">
-                <span class="sidebarItem flex items-center"><span class="text-gray-500">Total Market Cap: </span>&nbsp;
+                <span class="sidebarItem items-center"><span class="text-gray">Total Market Cap: </span>&nbsp;
                     $923.7
                     B</span>
             </div>
         </div>
-        <div class="flex justify-center">
+        <div class="justify-center">
             <img id="logo" src="assets/image/Logo_Animation.webp/Logo_Animation.webp" style="width: 98px; height: 98px;"
                 alt="">
         </div>
@@ -70,16 +70,16 @@
         </a>
 
 
-        <div class="grid grid-cols-3 gap-3" id="btnGroup1">
-            <div class="flex justify-center">
+        <div class="btngroup" id="btnGroup1">
+            <div class="justify-center">
                 <img id="lightdrap" onclick="btnGroup(event, 'lightdrap')" style="display: none;"
                     src="./assets/image/Lightmode.svg" alt="">
                 <img id="darkdrap" onclick="btnGroup(event, 'darkdrap')" src="assets/image/Darkmode.svg" alt="">
             </div>
-            <div class="flex justify-center">
+            <div class="justify-center">
                 <img src="assets/image/USD.svg" alt="">
             </div>
-            <div class="flex justify-center">
+            <div class="justify-center">
                 <img src="assets/image/ENG.svg" alt="">
             </div>
         </div>
@@ -89,29 +89,28 @@
                 style="background: linear-gradient(103.97deg, rgba(45, 73, 116, 0.47) 14.53%, rgba(60, 33, 103, 0.47) 87.12%);">
                 <div style="background-image: url(./assets/image/Frame48.png);">
                     <div class="text-white text-center py-3"><span>257.35 BNB Lottery Pot</span></div>
-                    <div class="flex justify-center pb-3">
+                    <div class="justify-center pb-3">
                         <img src="./assets/image/Frame 16.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="grid grid-cols-2 p-3 sidebarItem relative"
-            style="background: linear-gradient(180deg, #504A6B 13.43%, #45405F 79.85%);">
-            <div class="flex justify-center">
+        <div class="follower sidebarItem" style="background: linear-gradient(180deg, #504A6B 13.43%, #45405F 79.85%);">
+            <div class="justify-center">
                 <img src="./assets/image/Follow us Button.png" alt="">
             </div>
             <div class="text-white text-end text-xs">
-                <div>2.4k <span class="text-gray-500">Following</span></div>
-                <div>12k <span class="text-gray-500">Followers</span></div>
+                <div>2.4k <span class="text-gray">Following</span></div>
+                <div>12k <span class="text-gray">Followers</span></div>
             </div>
-            <div id="follower" class="absolute bottom-[-11px] left-[28px]">
+            <div id="follower" class="pointer">
                 <img src="./assets/image/Polygon 1.png" alt="">
             </div>
         </div>
 
-        <div class="grid grid-cols-3 gap-3 pt-5" id="btnSocial">
-            <div class="flex justify-center items-center" style="height: 40px;">
+        <div class="btngroup pt-5" id="btnSocial">
+            <div class="justify-align-center" style="height: 40px;">
                 <div id="ingradient1" class="active1">
                     <div id="ingradient2" class="active2">
                         <svg onclick="btnSocial(event, 'instagram')" version="1.1" id="Livello_1"
@@ -134,7 +133,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center items-center" style="height: 40px;">
+            <div class="justify-align-center" style="height: 40px;">
                 <div id="tegradient1">
                     <div id="tegradient2">
                         <svg onclick="btnSocial(event, 'telegram')" version="1.1" id="Livello_1"
@@ -156,7 +155,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center items-center" style="height: 40px;">
+            <div class="justify-align-center" style="height: 40px;">
                 <div id="twgradient1">
                     <div id="twgradient2">
                         <svg onclick="btnSocial(event, 'twitter')" version="1.1" id="Livello_1"
@@ -184,86 +183,233 @@
         </div>
     </div>
 
-    <div id="main" style="background : #1E2233;" class="ml-[0px] lg:ml-[280px]">
+    <div id="main" style="background : #1E2233;" class="mainside ml-[0px] lg:ml-[280px]">
 
         <!-- NavBar -->
-        <div class="grid grid-cols-8 lg:grid-cols-12 xl:grid-cols-11 py-2 px-6 gap-2" style="background: #23203F;">
-            <div class="col-span-1 flex items-center lg:hidden"><img src="assets/image/Icone_Side-Menu/Menu_icon_01.svg"
+        <div class="navbar" style="background: #23203F;">
+            <div class="col-span-1 items-center navbaricon"><img src="assets/image/Icone_Side-Menu/Menu_icon_01.svg"
                     style="width: 30px; height : 30px;" alt=""></div>
-            <div class="col-span-3 md:col-span-4">
-                <form class="flex items-center">
+            <div class="navbarSearch">
+                <form class="items-center">
                     <label for="simple-search" class="sr-only">Search</label>
                     <div class="relative w-full">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <div class="absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 text-gray" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                     d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                                     clip-rule="evenodd"></path>
                             </svg>
                         </div>
                         <input type="text" id="simple-search"
-                            style="background: linear-gradient(180deg, #1C1E39 50%, rgba(35, 35, 63, 0.26) 151.92%); border: 1px solid rgba(77, 73, 128, 1);"
-                            class="text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="Browse Crypto" required>
+                            style="width: 86%; background: linear-gradient(180deg, #1C1E39 50%, rgba(35, 35, 63, 0.26) 151.92%); border: 1px solid rgba(77, 73, 128, 1);"
+                            class="text-gray-900 text-sm rounded-lg block pl-10 p-25" placeholder="Browse Crypto"
+                            required>
                     </div>
                 </form>
             </div>
-            <div class="hidden lg:flex col-span-4 scrollx items-center">
-                <div class="flex">
-                    <div class="flex subscrollx justify-around items-center" style="width: 340px;">
+            <div class="ergo">
+                <div class="flex scrollx">
+                    <div class="subscrollx items-center-around" style="width: 340px;">
                         <img src="./assets/image/Icone_Side-Menu/navbar/m.svg" alt="">
                         <p class="text-white text-xs">ERGO new wallet to be released next week</p>
                         <p class="text-xs" style="color: rgba(92, 92, 234, 1);">Read More</p>
                     </div>
-                    <div class="flex subscrollx justify-around items-center" style="width: 340px;">
+                    <div class="subscrollx items-center-around" style="width: 340px;">
                         <img src="./assets/image/Icone_Side-Menu/navbar/ethernavbar.svg" alt="">
                         <p class="text-white text-xs">ETH The Merge was successfully actived</p>
                         <p class="text-xs" style="color: rgba(92, 92, 234, 1);">Read More</p>
                     </div>
                 </div>
             </div>
-            <div class="col-span-4 md:col-span-3 flex items-center">
-                <div class="w-[100%]">
-                    <div class="relative flex justify-around">
+            <div class="login items-center">
+                <div class="w-full">
+                    <div class="relative justify-around">
                         <button
                             style="background: linear-gradient(92.66deg, #505089 21.8%, #242441 81.65%); border: 1px solid rgba(93, 93, 137, 1);"
-                            class="text-white px-1 md:px-6 rounded text-[15px] font-[700]" onclick="chooseMethod()">
-                            <p id="login"></p>
+                            class="text-white choose rounded font-15 font-700" onclick="chooseMethod()">
+                            <span id="login"></span>
                         </button>
-                        <div class="absolute bottom-[-250px] left-[0px] w-[250px] py-3 px-6 hidden" id="method" style="background: #1F2230;">
-                            <div class="flex justify-between">
-                                <p class="text-white text-[15px]">Connect</p>
-                                <svg onclick="chooseMethod()" class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        <div class="loginmodal" id="method" style="background: #1F2230;">
+                            <div class="justify-between">
+                                <p class="text-white font-15">Connect</p>
+                                <svg onclick="chooseMethod()" class="w-5 h-5 text-white" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
                             </div>
                             <div class="mt-2">
-                                <div class="flex justify-between items-center px-3 py-1" style="background: #191826;">
-                                    <p class="text-white text-[12px]">MetaMask</p>
-                                    <div class="flex items-center">
-                                        <svg aria-hidden="true" class="h-4" viewBox="0 0 40 38" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M39.0728 0L21.9092 12.6999L25.1009 5.21543L39.0728 0Z" fill="#E17726"/><path d="M0.966797 0.0151367L14.9013 5.21656L17.932 12.7992L0.966797 0.0151367Z" fill="#E27625"/><path d="M32.1656 27.0093L39.7516 27.1537L37.1004 36.1603L27.8438 33.6116L32.1656 27.0093Z" fill="#E27625"/><path d="M7.83409 27.0093L12.1399 33.6116L2.89876 36.1604L0.263672 27.1537L7.83409 27.0093Z" fill="#E27625"/><path d="M17.5203 10.8677L17.8304 20.8807L8.55371 20.4587L11.1924 16.4778L11.2258 16.4394L17.5203 10.8677Z" fill="#E27625"/><path d="M22.3831 10.7559L28.7737 16.4397L28.8067 16.4778L31.4455 20.4586L22.1709 20.8806L22.3831 10.7559Z" fill="#E27625"/><path d="M12.4115 27.0381L17.4768 30.9848L11.5928 33.8257L12.4115 27.0381Z" fill="#E27625"/><path d="M27.5893 27.0376L28.391 33.8258L22.5234 30.9847L27.5893 27.0376Z" fill="#E27625"/><path d="M22.6523 30.6128L28.6066 33.4959L23.0679 36.1282L23.1255 34.3884L22.6523 30.6128Z" fill="#D5BFB2"/><path d="M17.3458 30.6143L16.8913 34.3601L16.9286 36.1263L11.377 33.4961L17.3458 30.6143Z" fill="#D5BFB2"/><path d="M15.6263 22.1875L17.1822 25.4575L11.8848 23.9057L15.6263 22.1875Z" fill="#233447"/><path d="M24.3739 22.1875L28.133 23.9053L22.8184 25.4567L24.3739 22.1875Z" fill="#233447"/><path d="M12.8169 27.0049L11.9606 34.0423L7.37109 27.1587L12.8169 27.0049Z" fill="#CC6228"/><path d="M27.1836 27.0049L32.6296 27.1587L28.0228 34.0425L27.1836 27.0049Z" fill="#CC6228"/><path d="M31.5799 20.0605L27.6165 24.0998L24.5608 22.7034L23.0978 25.779L22.1387 20.4901L31.5799 20.0605Z" fill="#CC6228"/><path d="M8.41797 20.0605L17.8608 20.4902L16.9017 25.779L15.4384 22.7038L12.3988 24.0999L8.41797 20.0605Z" fill="#CC6228"/><path d="M8.15039 19.2314L12.6345 23.7816L12.7899 28.2736L8.15039 19.2314Z" fill="#E27525"/><path d="M31.8538 19.2236L27.2061 28.2819L27.381 23.7819L31.8538 19.2236Z" fill="#E27525"/><path d="M17.6412 19.5088L17.8217 20.6447L18.2676 23.4745L17.9809 32.166L16.6254 25.1841L16.625 25.1119L17.6412 19.5088Z" fill="#E27525"/><path d="M22.3562 19.4932L23.3751 25.1119L23.3747 25.1841L22.0158 32.1835L21.962 30.4328L21.75 23.4231L22.3562 19.4932Z" fill="#E27525"/><path d="M27.7797 23.6011L27.628 27.5039L22.8977 31.1894L21.9414 30.5138L23.0133 24.9926L27.7797 23.6011Z" fill="#F5841F"/><path d="M12.2373 23.6011L16.9873 24.9926L18.0591 30.5137L17.1029 31.1893L12.3723 27.5035L12.2373 23.6011Z" fill="#F5841F"/><path d="M10.4717 32.6338L16.5236 35.5013L16.4979 34.2768L17.0043 33.8323H22.994L23.5187 34.2753L23.48 35.4989L29.4935 32.641L26.5673 35.0591L23.0289 37.4894H16.9558L13.4197 35.0492L10.4717 32.6338Z" fill="#C0AC9D"/><path d="M22.2191 30.231L23.0748 30.8354L23.5763 34.8361L22.8506 34.2234H17.1513L16.4395 34.8485L16.9244 30.8357L17.7804 30.231H22.2191Z" fill="#161616"/><path d="M37.9395 0.351562L39.9998 6.53242L38.7131 12.7819L39.6293 13.4887L38.3895 14.4346L39.3213 15.1542L38.0875 16.2779L38.8449 16.8264L36.8347 19.1742L28.5894 16.7735L28.5179 16.7352L22.5762 11.723L37.9395 0.351562Z" fill="#763E1A"/><path d="M2.06031 0.351562L17.4237 11.723L11.4819 16.7352L11.4105 16.7735L3.16512 19.1742L1.15488 16.8264L1.91176 16.2783L0.678517 15.1542L1.60852 14.4354L0.350209 13.4868L1.30098 12.7795L0 6.53265L2.06031 0.351562Z" fill="#763E1A"/><path d="M28.1861 16.2485L36.9226 18.7921L39.7609 27.5398L32.2728 27.5398L27.1133 27.6049L30.8655 20.2912L28.1861 16.2485Z" fill="#F5841F"/><path d="M11.8139 16.2485L9.13399 20.2912L12.8867 27.6049L7.72971 27.5398H0.254883L3.07728 18.7922L11.8139 16.2485Z" fill="#F5841F"/><path d="M25.5283 5.17383L23.0847 11.7736L22.5661 20.6894L22.3677 23.4839L22.352 30.6225H17.6471L17.6318 23.4973L17.4327 20.6869L16.9139 11.7736L14.4707 5.17383H25.5283Z" fill="#F5841F"/></svg>
-                                        <svg class="w-6 h-6 pl-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                <div class="justify-between-algin-center px-3 py-1" style="background: #191826;">
+                                    <p class="text-white font-12">MetaMask</p>
+                                    <div class="items-center">
+                                        <svg aria-hidden="true" class="h-5" viewBox="0 0 40 38" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M39.0728 0L21.9092 12.6999L25.1009 5.21543L39.0728 0Z"
+                                                fill="#E17726" />
+                                            <path
+                                                d="M0.966797 0.0151367L14.9013 5.21656L17.932 12.7992L0.966797 0.0151367Z"
+                                                fill="#E27625" />
+                                            <path
+                                                d="M32.1656 27.0093L39.7516 27.1537L37.1004 36.1603L27.8438 33.6116L32.1656 27.0093Z"
+                                                fill="#E27625" />
+                                            <path
+                                                d="M7.83409 27.0093L12.1399 33.6116L2.89876 36.1604L0.263672 27.1537L7.83409 27.0093Z"
+                                                fill="#E27625" />
+                                            <path
+                                                d="M17.5203 10.8677L17.8304 20.8807L8.55371 20.4587L11.1924 16.4778L11.2258 16.4394L17.5203 10.8677Z"
+                                                fill="#E27625" />
+                                            <path
+                                                d="M22.3831 10.7559L28.7737 16.4397L28.8067 16.4778L31.4455 20.4586L22.1709 20.8806L22.3831 10.7559Z"
+                                                fill="#E27625" />
+                                            <path d="M12.4115 27.0381L17.4768 30.9848L11.5928 33.8257L12.4115 27.0381Z"
+                                                fill="#E27625" />
+                                            <path d="M27.5893 27.0376L28.391 33.8258L22.5234 30.9847L27.5893 27.0376Z"
+                                                fill="#E27625" />
+                                            <path
+                                                d="M22.6523 30.6128L28.6066 33.4959L23.0679 36.1282L23.1255 34.3884L22.6523 30.6128Z"
+                                                fill="#D5BFB2" />
+                                            <path
+                                                d="M17.3458 30.6143L16.8913 34.3601L16.9286 36.1263L11.377 33.4961L17.3458 30.6143Z"
+                                                fill="#D5BFB2" />
+                                            <path d="M15.6263 22.1875L17.1822 25.4575L11.8848 23.9057L15.6263 22.1875Z"
+                                                fill="#233447" />
+                                            <path d="M24.3739 22.1875L28.133 23.9053L22.8184 25.4567L24.3739 22.1875Z"
+                                                fill="#233447" />
+                                            <path d="M12.8169 27.0049L11.9606 34.0423L7.37109 27.1587L12.8169 27.0049Z"
+                                                fill="#CC6228" />
+                                            <path d="M27.1836 27.0049L32.6296 27.1587L28.0228 34.0425L27.1836 27.0049Z"
+                                                fill="#CC6228" />
+                                            <path
+                                                d="M31.5799 20.0605L27.6165 24.0998L24.5608 22.7034L23.0978 25.779L22.1387 20.4901L31.5799 20.0605Z"
+                                                fill="#CC6228" />
+                                            <path
+                                                d="M8.41797 20.0605L17.8608 20.4902L16.9017 25.779L15.4384 22.7038L12.3988 24.0999L8.41797 20.0605Z"
+                                                fill="#CC6228" />
+                                            <path d="M8.15039 19.2314L12.6345 23.7816L12.7899 28.2736L8.15039 19.2314Z"
+                                                fill="#E27525" />
+                                            <path d="M31.8538 19.2236L27.2061 28.2819L27.381 23.7819L31.8538 19.2236Z"
+                                                fill="#E27525" />
+                                            <path
+                                                d="M17.6412 19.5088L17.8217 20.6447L18.2676 23.4745L17.9809 32.166L16.6254 25.1841L16.625 25.1119L17.6412 19.5088Z"
+                                                fill="#E27525" />
+                                            <path
+                                                d="M22.3562 19.4932L23.3751 25.1119L23.3747 25.1841L22.0158 32.1835L21.962 30.4328L21.75 23.4231L22.3562 19.4932Z"
+                                                fill="#E27525" />
+                                            <path
+                                                d="M27.7797 23.6011L27.628 27.5039L22.8977 31.1894L21.9414 30.5138L23.0133 24.9926L27.7797 23.6011Z"
+                                                fill="#F5841F" />
+                                            <path
+                                                d="M12.2373 23.6011L16.9873 24.9926L18.0591 30.5137L17.1029 31.1893L12.3723 27.5035L12.2373 23.6011Z"
+                                                fill="#F5841F" />
+                                            <path
+                                                d="M10.4717 32.6338L16.5236 35.5013L16.4979 34.2768L17.0043 33.8323H22.994L23.5187 34.2753L23.48 35.4989L29.4935 32.641L26.5673 35.0591L23.0289 37.4894H16.9558L13.4197 35.0492L10.4717 32.6338Z"
+                                                fill="#C0AC9D" />
+                                            <path
+                                                d="M22.2191 30.231L23.0748 30.8354L23.5763 34.8361L22.8506 34.2234H17.1513L16.4395 34.8485L16.9244 30.8357L17.7804 30.231H22.2191Z"
+                                                fill="#161616" />
+                                            <path
+                                                d="M37.9395 0.351562L39.9998 6.53242L38.7131 12.7819L39.6293 13.4887L38.3895 14.4346L39.3213 15.1542L38.0875 16.2779L38.8449 16.8264L36.8347 19.1742L28.5894 16.7735L28.5179 16.7352L22.5762 11.723L37.9395 0.351562Z"
+                                                fill="#763E1A" />
+                                            <path
+                                                d="M2.06031 0.351562L17.4237 11.723L11.4819 16.7352L11.4105 16.7735L3.16512 19.1742L1.15488 16.8264L1.91176 16.2783L0.678517 15.1542L1.60852 14.4354L0.350209 13.4868L1.30098 12.7795L0 6.53265L2.06031 0.351562Z"
+                                                fill="#763E1A" />
+                                            <path
+                                                d="M28.1861 16.2485L36.9226 18.7921L39.7609 27.5398L32.2728 27.5398L27.1133 27.6049L30.8655 20.2912L28.1861 16.2485Z"
+                                                fill="#F5841F" />
+                                            <path
+                                                d="M11.8139 16.2485L9.13399 20.2912L12.8867 27.6049L7.72971 27.5398H0.254883L3.07728 18.7922L11.8139 16.2485Z"
+                                                fill="#F5841F" />
+                                            <path
+                                                d="M25.5283 5.17383L23.0847 11.7736L22.5661 20.6894L22.3677 23.4839L22.352 30.6225H17.6471L17.6318 23.4973L17.4327 20.6869L16.9139 11.7736L14.4707 5.17383H25.5283Z"
+                                                fill="#F5841F" />
+                                        </svg>
+                                        <svg class="w-6 h-6 pl-2 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
                                     </div>
                                 </div>
-                                <div class="flex justify-between items-center px-3 py-1 my-2" style="background: #191826;">
-                                    <p class="text-white text-[12px]">Trust Wallet</p>
-                                    <div class="flex items-center">
-                                        <svg aria-hidden="true" class="h-5" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><radialGradient cx="0%" cy="50%" fx="0%" fy="50%" r="100%" id="radialGradient-1"><stop stop-color="#5D9DF6" offset="0%"></stop><stop stop-color="#006FFF" offset="100%"></stop></radialGradient></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="logo"><rect id="base" fill="url(#radialGradient-1)" x="0" y="0" width="512" height="512" rx="256"></rect><path d="M169.209772,184.531136 C217.142772,137.600733 294.857519,137.600733 342.790517,184.531136 L348.559331,190.179285 C350.955981,192.525805 350.955981,196.330266 348.559331,198.676787 L328.82537,217.99798 C327.627045,219.171241 325.684176,219.171241 324.485851,217.99798 L316.547278,210.225455 C283.10802,177.485633 228.89227,177.485633 195.453011,210.225455 L186.951456,218.549188 C185.75313,219.722448 183.810261,219.722448 182.611937,218.549188 L162.877976,199.227995 C160.481326,196.881474 160.481326,193.077013 162.877976,190.730493 L169.209772,184.531136 Z M383.602212,224.489406 L401.165475,241.685365 C403.562113,244.031874 403.562127,247.836312 401.165506,250.182837 L321.971538,327.721548 C319.574905,330.068086 315.689168,330.068112 313.292501,327.721609 C313.292491,327.721599 313.29248,327.721588 313.29247,327.721578 L257.08541,272.690097 C256.486248,272.103467 255.514813,272.103467 254.915651,272.690097 C254.915647,272.690101 254.915644,272.690105 254.91564,272.690108 L198.709777,327.721548 C196.313151,330.068092 192.427413,330.068131 190.030739,327.721634 C190.030725,327.72162 190.03071,327.721606 190.030695,327.721591 L110.834524,250.181849 C108.437875,247.835329 108.437875,244.030868 110.834524,241.684348 L128.397819,224.488418 C130.794468,222.141898 134.680206,222.141898 137.076856,224.488418 L193.284734,279.520668 C193.883897,280.107298 194.85533,280.107298 195.454493,279.520668 C195.454502,279.520659 195.45451,279.520651 195.454519,279.520644 L251.65958,224.488418 C254.056175,222.141844 257.941913,222.141756 260.338618,224.488222 C260.338651,224.488255 260.338684,224.488288 260.338717,224.488321 L316.546521,279.520644 C317.145683,280.107273 318.117118,280.107273 318.71628,279.520644 L374.923175,224.489406 C377.319825,222.142885 381.205562,222.142885 383.602212,224.489406 Z" id="WalletConnect" fill="#FFFFFF" fill-rule="nonzero"></path></g></g></svg>
-                                        <svg class="w-6 h-6 pl-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                <div class="justify-between-algin-center px-3 py-1 my-2" style="background: #191826;">
+                                    <p class="text-white font-12">Trust Wallet</p>
+                                    <div class="items-center">
+                                        <svg aria-hidden="true" class="h-5" viewBox="0 0 512 512" version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <defs>
+                                                <radialGradient cx="0%" cy="50%" fx="0%" fy="50%" r="100%"
+                                                    id="radialGradient-1">
+                                                    <stop stop-color="#5D9DF6" offset="0%"></stop>
+                                                    <stop stop-color="#006FFF" offset="100%"></stop>
+                                                </radialGradient>
+                                            </defs>
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                fill-rule="evenodd">
+                                                <g id="logo">
+                                                    <rect id="base" fill="url(#radialGradient-1)" x="0" y="0"
+                                                        width="512" height="512" rx="256"></rect>
+                                                    <path
+                                                        d="M169.209772,184.531136 C217.142772,137.600733 294.857519,137.600733 342.790517,184.531136 L348.559331,190.179285 C350.955981,192.525805 350.955981,196.330266 348.559331,198.676787 L328.82537,217.99798 C327.627045,219.171241 325.684176,219.171241 324.485851,217.99798 L316.547278,210.225455 C283.10802,177.485633 228.89227,177.485633 195.453011,210.225455 L186.951456,218.549188 C185.75313,219.722448 183.810261,219.722448 182.611937,218.549188 L162.877976,199.227995 C160.481326,196.881474 160.481326,193.077013 162.877976,190.730493 L169.209772,184.531136 Z M383.602212,224.489406 L401.165475,241.685365 C403.562113,244.031874 403.562127,247.836312 401.165506,250.182837 L321.971538,327.721548 C319.574905,330.068086 315.689168,330.068112 313.292501,327.721609 C313.292491,327.721599 313.29248,327.721588 313.29247,327.721578 L257.08541,272.690097 C256.486248,272.103467 255.514813,272.103467 254.915651,272.690097 C254.915647,272.690101 254.915644,272.690105 254.91564,272.690108 L198.709777,327.721548 C196.313151,330.068092 192.427413,330.068131 190.030739,327.721634 C190.030725,327.72162 190.03071,327.721606 190.030695,327.721591 L110.834524,250.181849 C108.437875,247.835329 108.437875,244.030868 110.834524,241.684348 L128.397819,224.488418 C130.794468,222.141898 134.680206,222.141898 137.076856,224.488418 L193.284734,279.520668 C193.883897,280.107298 194.85533,280.107298 195.454493,279.520668 C195.454502,279.520659 195.45451,279.520651 195.454519,279.520644 L251.65958,224.488418 C254.056175,222.141844 257.941913,222.141756 260.338618,224.488222 C260.338651,224.488255 260.338684,224.488288 260.338717,224.488321 L316.546521,279.520644 C317.145683,280.107273 318.117118,280.107273 318.71628,279.520644 L374.923175,224.489406 C377.319825,222.142885 381.205562,222.142885 383.602212,224.489406 Z"
+                                                        id="WalletConnect" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        <svg class="w-6 h-6 pl-2 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
                                     </div>
                                 </div>
-                                <div class="flex justify-between items-center px-3 py-1 my-2" style="background: #191826;">
-                                    <p class="text-white text-[12px]">Connect Wallet</p>
-                                    <div class="flex items-center">
-                                        <svg aria-hidden="true" class="h-5" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><radialGradient cx="0%" cy="50%" fx="0%" fy="50%" r="100%" id="radialGradient-1"><stop stop-color="#5D9DF6" offset="0%"></stop><stop stop-color="#006FFF" offset="100%"></stop></radialGradient></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="logo"><rect id="base" fill="url(#radialGradient-1)" x="0" y="0" width="512" height="512" rx="256"></rect><path d="M169.209772,184.531136 C217.142772,137.600733 294.857519,137.600733 342.790517,184.531136 L348.559331,190.179285 C350.955981,192.525805 350.955981,196.330266 348.559331,198.676787 L328.82537,217.99798 C327.627045,219.171241 325.684176,219.171241 324.485851,217.99798 L316.547278,210.225455 C283.10802,177.485633 228.89227,177.485633 195.453011,210.225455 L186.951456,218.549188 C185.75313,219.722448 183.810261,219.722448 182.611937,218.549188 L162.877976,199.227995 C160.481326,196.881474 160.481326,193.077013 162.877976,190.730493 L169.209772,184.531136 Z M383.602212,224.489406 L401.165475,241.685365 C403.562113,244.031874 403.562127,247.836312 401.165506,250.182837 L321.971538,327.721548 C319.574905,330.068086 315.689168,330.068112 313.292501,327.721609 C313.292491,327.721599 313.29248,327.721588 313.29247,327.721578 L257.08541,272.690097 C256.486248,272.103467 255.514813,272.103467 254.915651,272.690097 C254.915647,272.690101 254.915644,272.690105 254.91564,272.690108 L198.709777,327.721548 C196.313151,330.068092 192.427413,330.068131 190.030739,327.721634 C190.030725,327.72162 190.03071,327.721606 190.030695,327.721591 L110.834524,250.181849 C108.437875,247.835329 108.437875,244.030868 110.834524,241.684348 L128.397819,224.488418 C130.794468,222.141898 134.680206,222.141898 137.076856,224.488418 L193.284734,279.520668 C193.883897,280.107298 194.85533,280.107298 195.454493,279.520668 C195.454502,279.520659 195.45451,279.520651 195.454519,279.520644 L251.65958,224.488418 C254.056175,222.141844 257.941913,222.141756 260.338618,224.488222 C260.338651,224.488255 260.338684,224.488288 260.338717,224.488321 L316.546521,279.520644 C317.145683,280.107273 318.117118,280.107273 318.71628,279.520644 L374.923175,224.489406 C377.319825,222.142885 381.205562,222.142885 383.602212,224.489406 Z" id="WalletConnect" fill="#FFFFFF" fill-rule="nonzero"></path></g></g></svg>
-                                        <svg class="w-6 h-6 pl-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                <div class="justify-between-algin-center px-3 py-1 my-2" style="background: #191826;">
+                                    <p class="text-white font-12">Connect Wallet</p>
+                                    <div class="items-center">
+                                        <svg aria-hidden="true" class="h-5" viewBox="0 0 512 512" version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <defs>
+                                                <radialGradient cx="0%" cy="50%" fx="0%" fy="50%" r="100%"
+                                                    id="radialGradient-1">
+                                                    <stop stop-color="#5D9DF6" offset="0%"></stop>
+                                                    <stop stop-color="#006FFF" offset="100%"></stop>
+                                                </radialGradient>
+                                            </defs>
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                fill-rule="evenodd">
+                                                <g id="logo">
+                                                    <rect id="base" fill="url(#radialGradient-1)" x="0" y="0"
+                                                        width="512" height="512" rx="256"></rect>
+                                                    <path
+                                                        d="M169.209772,184.531136 C217.142772,137.600733 294.857519,137.600733 342.790517,184.531136 L348.559331,190.179285 C350.955981,192.525805 350.955981,196.330266 348.559331,198.676787 L328.82537,217.99798 C327.627045,219.171241 325.684176,219.171241 324.485851,217.99798 L316.547278,210.225455 C283.10802,177.485633 228.89227,177.485633 195.453011,210.225455 L186.951456,218.549188 C185.75313,219.722448 183.810261,219.722448 182.611937,218.549188 L162.877976,199.227995 C160.481326,196.881474 160.481326,193.077013 162.877976,190.730493 L169.209772,184.531136 Z M383.602212,224.489406 L401.165475,241.685365 C403.562113,244.031874 403.562127,247.836312 401.165506,250.182837 L321.971538,327.721548 C319.574905,330.068086 315.689168,330.068112 313.292501,327.721609 C313.292491,327.721599 313.29248,327.721588 313.29247,327.721578 L257.08541,272.690097 C256.486248,272.103467 255.514813,272.103467 254.915651,272.690097 C254.915647,272.690101 254.915644,272.690105 254.91564,272.690108 L198.709777,327.721548 C196.313151,330.068092 192.427413,330.068131 190.030739,327.721634 C190.030725,327.72162 190.03071,327.721606 190.030695,327.721591 L110.834524,250.181849 C108.437875,247.835329 108.437875,244.030868 110.834524,241.684348 L128.397819,224.488418 C130.794468,222.141898 134.680206,222.141898 137.076856,224.488418 L193.284734,279.520668 C193.883897,280.107298 194.85533,280.107298 195.454493,279.520668 C195.454502,279.520659 195.45451,279.520651 195.454519,279.520644 L251.65958,224.488418 C254.056175,222.141844 257.941913,222.141756 260.338618,224.488222 C260.338651,224.488255 260.338684,224.488288 260.338717,224.488321 L316.546521,279.520644 C317.145683,280.107273 318.117118,280.107273 318.71628,279.520644 L374.923175,224.489406 C377.319825,222.142885 381.205562,222.142885 383.602212,224.489406 Z"
+                                                        id="WalletConnect" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        <svg class="w-6 h-6 pl-2 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
                                     </div>
                                 </div>
-                                <div class="flex justify-center"><p class="text-white">Or</p></div>
-                                <div class="flex justify-between px-3 py-1 my-2" style="background: #383751;">
-                                    <p class="text-white text-[12px]">Continue with Email</p>
+                                <div class="justify-center">
+                                    <p class="text-white">Or</p>
+                                </div>
+                                <div class="justify-between px-3 py-1 my-2" style="background: #383751;">
+                                    <p class="text-white font-12">Continue with Email</p>
                                     <div class="flex">
-                                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path></svg>
-                                        <svg class="w-6 h-6 pl-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4">
+                                            </path>
+                                        </svg>
+                                        <svg class="w-6 h-6 pl-2 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
                                     </div>
                                 </div>
                             </div>
@@ -275,15 +421,15 @@
         </div>
 
         <!-- hidden / show bar -->
-        <div class="flex justify-center">
-            <div class="flex lg:hidden scrollx items-center py-3">
+        <div class="justify-center">
+            <div class="navbaricon scrollx items-center py-3">
                 <div class="flex">
-                    <div class="flex subscrollx justify-around items-center" style="width: 340px;">
+                    <div class="subscrollx items-center-around" style="width: 340px;">
                         <img src="./assets/image/Icone_Side-Menu/navbar/m.svg" alt="">
                         <p class="text-white text-xs">ERGO new wallet to be released next week</p>
                         <p class="text-xs" style="color: rgba(92, 92, 234, 1);">Read More</p>
                     </div>
-                    <div class="flex subscrollx justify-around items-center" style="width: 340px;">
+                    <div class="subscrollx items-center-around" style="width: 340px;">
                         <img src="./assets/image/Icone_Side-Menu/navbar/ethernavbar.svg" alt="">
                         <p class="text-white text-xs">ETH The Merge was successfully actived</p>
                         <p class="text-xs" style="color: rgba(92, 92, 234, 1);">Read More</p>
@@ -297,95 +443,256 @@
         <div style="background: #30314E;" class="py-2 scrollx flex" id="coinnavbar"></div>
 
         <div class="mainer">
-            <div id="maingap" class="grid grid-cols-1 lg:grid-cols-12 gap-3">
+            <div id="maingap" class="maingap gap-3">
 
                 <!-- Top Protocals -->
 
-                <div class="lg:col-span-4 xl:col-span-5 2xl:col-span-7">
+                <div class="TopProtocal">
 
                     <div class="my-5">
-                        <button class="flex border border-gray-600 rounded py-2 px-2">
-                            <p class="text-white text-[15px]">Top Protocols</p>
-                            <div class="flex items-center justify-center w-[24px] h-[24px]">
+                        <button class="topprotocal">
+                            <span class="text-white font-15">Top Protocols</span>
+                            <div class="justify-align-center w-24 h-24">
                                 <img src="./assets/image/Icone_Side-Menu/Icon.svg" alt="">
                             </div>
                         </button>
                     </div>
-                    <div class="flex lg:justify-start scrollx w-[100%]">
+                    <div class="flex justify-start scrollx w-full">
 
                         <!-- -----------Bitcoin-------- -->
+                        <div class="topcoin subscrollx">
+                            <div class="" style="padding: 0.375rem 1.25rem;">
+                                <div class="justify-between my-25">
+                                    <div>
+                                        <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28.9px"
+                                            height="24.5px" viewBox="0 0 28.9 24.5"
+                                            style="enable-background:new 0 0 28.9 24.5;" xml:space="preserve">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill: url(#Tracciato_5359_1_);
+                                                }
 
-                        <div class="bg-black py-1.5 px-5 h-[305px] w-[235px] subscrollx">
-                            <div class="flex justify-between my-2.5">
-                                <div>
-                                    <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28.9px"
-                                        height="24.5px" viewBox="0 0 28.9 24.5"
-                                        style="enable-background:new 0 0 28.9 24.5;" xml:space="preserve">
-                                        <style type="text/css">
-                                            .st0 {
-                                                fill: url(#Tracciato_5359_1_);
-                                            }
+                                                .st1 {
+                                                    fill: url(#SVGID_1_);
+                                                }
 
-                                            .st1 {
-                                                fill: url(#SVGID_1_);
-                                            }
+                                                .st2 {
+                                                    opacity: 0.16;
+                                                    fill: #462100;
+                                                }
 
-                                            .st2 {
-                                                opacity: 0.16;
-                                                fill: #462100;
-                                            }
-
-                                            .st3 {
-                                                fill: url(#SVGID_2_);
-                                            }
-                                        </style>
-                                        <g>
-                                            <linearGradient id="Tracciato_5359_1_" gradientUnits="userSpaceOnUse"
-                                                x1="10.865" y1="8.2719" x2="19.3018" y2="20.4365">
-                                                <stop offset="0" style="stop-color:#1E2434" />
-                                                <stop offset="1" style="stop-color:#000000" />
-                                            </linearGradient>
-                                            <path id="Tracciato_5359_16_" class="st0" d="M24.9,11.9c-0.1,6.4-5.4,11.6-11.9,11.4C6.6,23.2,1.4,17.9,1.6,11.4S7-0.1,13.4,0
-            S25,5.4,24.9,11.9L24.9,11.9 M19,13.5c0-0.4-0.1-0.9-0.3-1.2c-0.3-0.5-0.7-0.9-1.2-1c-0.2-0.1-0.3-0.1-0.5-0.2c0,0,0,0,0,0l0.1,0
-            c0.5-0.2,0.8-0.6,1-1.1c0.1-0.4,0.2-0.8,0.1-1.2c0-0.7-0.4-1.3-1-1.7c-0.5-0.3-1.1-0.5-1.7-0.6c-0.2,0-0.4-0.1-0.7-0.1l0-2.3
-            l-1.4,0l0,2.3l-1.1,0l0-2.3l-1.4,0l0,2.3l-2.8,0l0,1.5l0.1,0c0.4,0,0.7,0,1.1,0c0.4,0,0.7,0.3,0.7,0.7c0,0,0,0,0,0
-            c0,2.1-0.1,4.1-0.1,6.1c0,0.3-0.2,0.5-0.5,0.5c0,0,0,0-0.1,0c-0.3,0-0.6,0-1,0c-0.1,0-0.1,0-0.1,0.1c-0.1,0.5-0.2,1-0.3,1.6
-            c0,0,0,0,0,0.1l2.8,0l0,2.3l1.4,0l0-2.3l1.1,0l0,2.3l1.4,0l0-2.3l0.1,0c0.3,0,0.6,0,0.9-0.1c0.6-0.1,1.1-0.2,1.7-0.4
-            c0.6-0.2,1.1-0.7,1.4-1.3C18.9,14.6,19,14,19,13.5 M16.1,13.2c0.2,0.6-0.1,1.3-0.6,1.5c-0.4,0.2-0.7,0.3-1.1,0.3
-            c-0.7,0.1-1.4,0.1-2.1,0.1c0,0,0,0,0,0l0.1-3.1c0,0,0.1,0,0.1,0c0.5,0,1,0,1.6,0c0.5,0,1,0.1,1.4,0.3C15.7,12.5,16,12.8,16.1,13.2
-             M12.3,10.6C12.3,10.6,12.3,10.6,12.3,10.6l0-2.8c0.2,0,0.4,0,0.6,0c0.5,0,1,0,1.5,0.2C14.7,8,15,8.2,15.2,8.4
-            c0.5,0.5,0.5,1.2,0,1.7c-0.1,0.1-0.2,0.2-0.3,0.2c-0.3,0.2-0.7,0.3-1,0.3C13.4,10.6,12.9,10.6,12.3,10.6" />
-                                            <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="12.2143"
-                                                y1="10.7078" x2="15.4358" y2="17.5748">
-                                                <stop offset="0" style="stop-color:#FFF0FF" />
-                                                <stop offset="0.3496" style="stop-color:#FCEAFF" />
-                                                <stop offset="1" style="stop-color:#AAA3AE" />
-                                            </linearGradient>
-                                            <path class="st1"
-                                                d="M14.6,19.2l0-2.3l0.1,0c0.3,0,0.6,0,0.9-0.1c0.6-0.1,1.1-0.2,1.7-0.4c0.6-0.2,1.1-0.7,1.4-1.3
-            c0.2-0.5,0.3-1.1,0.3-1.6l0,0c0-0.4-0.1-0.9-0.3-1.2c-0.3-0.5-0.7-0.9-1.2-1c-0.2-0.1-0.3-0.1-0.5-0.2c0,0,0,0,0,0l0.1,0
-            c0.5-0.2,0.8-0.6,1-1.1c0.1-0.4,0.2-0.8,0.1-1.2c0-0.7-0.4-1.3-1-1.7c-0.5-0.3-1.1-0.5-1.7-0.6c-0.2,0-0.4-0.1-0.7-0.1l0-2.3
-            l-1.4,0l0,2.3l-1.1,0l0-2.3l-1.4,0l0,2.3l-2.8,0l0,1.5l0.1,0c0.4,0,0.7,0,1.1,0c0.4,0,0.7,0.3,0.7,0.7c0,0,0,0,0,0
-            c0,2.1-0.1,4.1-0.1,6.1c0,0.3-0.2,0.5-0.5,0.5c0,0,0,0-0.1,0c-0.3,0-0.6,0-1,0c-0.1,0-0.1,0-0.1,0.1c-0.1,0.5-0.2,1-0.3,1.6
-            c0,0,0,0,0,0.1l2.8,0l0,2.3l1.4,0l0-2.3l1.1,0l0,2.3L14.6,19.2z M12.3,7.8c0.2,0,0.4,0,0.6,0c0.5,0,1,0,1.5,0.2
-            C14.7,8,15,8.2,15.2,8.4c0.5,0.5,0.5,1.2,0,1.7c-0.1,0.1-0.2,0.2-0.3,0.2c-0.3,0.2-0.7,0.3-1,0.3c-0.5,0.1-1.1,0.1-1.6,0l0,0
-            c0,0,0,0-0.1,0L12.3,7.8z M12.2,15.1C12.2,15.1,12.2,15.1,12.2,15.1l0-3.1c0,0,0.1,0,0.1,0c0.5,0,1,0,1.6,0c0.5,0,1,0.1,1.4,0.3
-            c0.4,0.1,0.6,0.4,0.8,0.8l0,0c0.2,0.6-0.1,1.3-0.6,1.5c-0.4,0.2-0.7,0.3-1.1,0.3C13.6,15.2,12.9,15.2,12.2,15.1z" />
+                                                .st3 {
+                                                    fill: url(#SVGID_2_);
+                                                }
+                                            </style>
                                             <g>
-                                                <path class="st2" d="M24.4,8.5c-3.8,4.8-13.1,10.6-18.1,12.5c0,0,1.6,1.1,1.5,1l-6.9,1.8c0.2,0.1,0.6,0.3,1.5,0.3
-                c0.9,0,2.2-0.2,4.3-1c2.2-0.9,5-2.3,7.8-3.9c3.9-2.4,8.5-5.7,11.3-8.8L24.4,8.5z" />
+                                                <linearGradient id="Tracciato_5359_1_" gradientUnits="userSpaceOnUse"
+                                                    x1="10.865" y1="8.2719" x2="19.3018" y2="20.4365">
+                                                    <stop offset="0" style="stop-color:#1E2434" />
+                                                    <stop offset="1" style="stop-color:#000000" />
+                                                </linearGradient>
+                                                <path id="Tracciato_5359_16_" class="st0"
+                                                    d="M24.9,11.9c-0.1,6.4-5.4,11.6-11.9,11.4C6.6,23.2,1.4,17.9,1.6,11.4S7-0.1,13.4,0
+                S25,5.4,24.9,11.9L24.9,11.9 M19,13.5c0-0.4-0.1-0.9-0.3-1.2c-0.3-0.5-0.7-0.9-1.2-1c-0.2-0.1-0.3-0.1-0.5-0.2c0,0,0,0,0,0l0.1,0
+                c0.5-0.2,0.8-0.6,1-1.1c0.1-0.4,0.2-0.8,0.1-1.2c0-0.7-0.4-1.3-1-1.7c-0.5-0.3-1.1-0.5-1.7-0.6c-0.2,0-0.4-0.1-0.7-0.1l0-2.3
+                l-1.4,0l0,2.3l-1.1,0l0-2.3l-1.4,0l0,2.3l-2.8,0l0,1.5l0.1,0c0.4,0,0.7,0,1.1,0c0.4,0,0.7,0.3,0.7,0.7c0,0,0,0,0,0
+                c0,2.1-0.1,4.1-0.1,6.1c0,0.3-0.2,0.5-0.5,0.5c0,0,0,0-0.1,0c-0.3,0-0.6,0-1,0c-0.1,0-0.1,0-0.1,0.1c-0.1,0.5-0.2,1-0.3,1.6
+                c0,0,0,0,0,0.1l2.8,0l0,2.3l1.4,0l0-2.3l1.1,0l0,2.3l1.4,0l0-2.3l0.1,0c0.3,0,0.6,0,0.9-0.1c0.6-0.1,1.1-0.2,1.7-0.4
+                c0.6-0.2,1.1-0.7,1.4-1.3C18.9,14.6,19,14,19,13.5 M16.1,13.2c0.2,0.6-0.1,1.3-0.6,1.5c-0.4,0.2-0.7,0.3-1.1,0.3
+                c-0.7,0.1-1.4,0.1-2.1,0.1c0,0,0,0,0,0l0.1-3.1c0,0,0.1,0,0.1,0c0.5,0,1,0,1.6,0c0.5,0,1,0.1,1.4,0.3C15.7,12.5,16,12.8,16.1,13.2
+                 M12.3,10.6C12.3,10.6,12.3,10.6,12.3,10.6l0-2.8c0.2,0,0.4,0,0.6,0c0.5,0,1,0,1.5,0.2C14.7,8,15,8.2,15.2,8.4
+                c0.5,0.5,0.5,1.2,0,1.7c-0.1,0.1-0.2,0.2-0.3,0.2c-0.3,0.2-0.7,0.3-1,0.3C13.4,10.6,12.9,10.6,12.3,10.6" />
+                                                <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse"
+                                                    x1="12.2143" y1="10.7078" x2="15.4358" y2="17.5748">
+                                                    <stop offset="0" style="stop-color:#FFF0FF" />
+                                                    <stop offset="0.3496" style="stop-color:#FCEAFF" />
+                                                    <stop offset="1" style="stop-color:#AAA3AE" />
+                                                </linearGradient>
+                                                <path class="st1"
+                                                    d="M14.6,19.2l0-2.3l0.1,0c0.3,0,0.6,0,0.9-0.1c0.6-0.1,1.1-0.2,1.7-0.4c0.6-0.2,1.1-0.7,1.4-1.3
+                c0.2-0.5,0.3-1.1,0.3-1.6l0,0c0-0.4-0.1-0.9-0.3-1.2c-0.3-0.5-0.7-0.9-1.2-1c-0.2-0.1-0.3-0.1-0.5-0.2c0,0,0,0,0,0l0.1,0
+                c0.5-0.2,0.8-0.6,1-1.1c0.1-0.4,0.2-0.8,0.1-1.2c0-0.7-0.4-1.3-1-1.7c-0.5-0.3-1.1-0.5-1.7-0.6c-0.2,0-0.4-0.1-0.7-0.1l0-2.3
+                l-1.4,0l0,2.3l-1.1,0l0-2.3l-1.4,0l0,2.3l-2.8,0l0,1.5l0.1,0c0.4,0,0.7,0,1.1,0c0.4,0,0.7,0.3,0.7,0.7c0,0,0,0,0,0
+                c0,2.1-0.1,4.1-0.1,6.1c0,0.3-0.2,0.5-0.5,0.5c0,0,0,0-0.1,0c-0.3,0-0.6,0-1,0c-0.1,0-0.1,0-0.1,0.1c-0.1,0.5-0.2,1-0.3,1.6
+                c0,0,0,0,0,0.1l2.8,0l0,2.3l1.4,0l0-2.3l1.1,0l0,2.3L14.6,19.2z M12.3,7.8c0.2,0,0.4,0,0.6,0c0.5,0,1,0,1.5,0.2
+                C14.7,8,15,8.2,15.2,8.4c0.5,0.5,0.5,1.2,0,1.7c-0.1,0.1-0.2,0.2-0.3,0.2c-0.3,0.2-0.7,0.3-1,0.3c-0.5,0.1-1.1,0.1-1.6,0l0,0
+                c0,0,0,0-0.1,0L12.3,7.8z M12.2,15.1C12.2,15.1,12.2,15.1,12.2,15.1l0-3.1c0,0,0.1,0,0.1,0c0.5,0,1,0,1.6,0c0.5,0,1,0.1,1.4,0.3
+                c0.4,0.1,0.6,0.4,0.8,0.8l0,0c0.2,0.6-0.1,1.3-0.6,1.5c-0.4,0.2-0.7,0.3-1.1,0.3C13.6,15.2,12.9,15.2,12.2,15.1z" />
                                                 <g>
-                                                    <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse"
-                                                        x1="18.257" y1="17.5777" x2="12.3831" y2="10.9696">
-                                                        <stop offset="0" style="stop-color:#FFA500" />
-                                                        <stop offset="0.5279" style="stop-color:#FF8800" />
-                                                        <stop offset="1" style="stop-color:#B85300" />
+                                                    <path class="st2" d="M24.4,8.5c-3.8,4.8-13.1,10.6-18.1,12.5c0,0,1.6,1.1,1.5,1l-6.9,1.8c0.2,0.1,0.6,0.3,1.5,0.3
+                    c0.9,0,2.2-0.2,4.3-1c2.2-0.9,5-2.3,7.8-3.9c3.9-2.4,8.5-5.7,11.3-8.8L24.4,8.5z" />
+                                                    <g>
+                                                        <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse"
+                                                            x1="18.257" y1="17.5777" x2="12.3831" y2="10.9696">
+                                                            <stop offset="0" style="stop-color:#FFA500" />
+                                                            <stop offset="0.5279" style="stop-color:#FF8800" />
+                                                            <stop offset="1" style="stop-color:#B85300" />
+                                                        </linearGradient>
+                                                        <path class="st3"
+                                                            d="M22.4,4.5c0.6-0.2,1.2-0.4,1.8-0.5c1.6-0.3,2.3,0,2.4,0.2c0,0.1,0.4,0.7-0.9,3.1C22.9,12.4,10,20.7,4,22.1
+                        c-1.2,0.3-1.7,0.2-1.8,0.1c0-0.1,0-0.5,0.5-1.5c0.4-0.7,0.7-1.4,1.2-2.1l-1.2-2.1l-0.5,0.8c-0.6,0.8-1,1.6-1.4,2.4
+                        c-1.4,2.9-0.3,4,0.5,4.4c0.2,0.1,0.6,0.3,1.5,0.3c0.9,0,2.2-0.2,4.3-1c2.2-0.9,5-2.3,7.8-3.9c4.9-3,10.9-7.5,12.9-11.2
+                        C29,5.9,29.2,4.2,28.4,3c-0.8-1.1-2.3-1.5-4.6-1.1c-1,0.2-2.1,0.5-3,0.9C20.8,2.8,21.8,3.8,22.4,4.5" />
+                                                    </g>
+                                                    <path class="st2"
+                                                        d="M3.2,19.8c0,0-0.9-0.9-1.4-1.9l0.9-1.3c0,0,0.7,1.3,1.3,2L3.2,19.8z" />
+                                                    <path class="st2"
+                                                        d="M20.8,2.8c0,0,1.2,1.1,1.6,1.7l0.2-0.1c0,0-0.6-1-1.4-1.8C21.2,2.6,21.1,2.6,20.8,2.8z" />
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="text-sm text-center items-center" style="color:rgba(143, 156, 210, 1);">
+                                        PoW
+                                    </div>
+                                </div>
+                                <div style="background: rgba(48, 49, 78, 0.67); z-index: 0; padding-top: 0.5rem;"
+                                    class="items-center rounded relative h-230 rounded-xl">
+                                    <div class="absolute justify-align-center"
+                                        style="z-index : -1; height: 100%;">
+                                        <img style="width: 195px;" src="./assets/image/ico/Ellipse 42 (1).png" alt="">
+                                    </div>
+                                    <div class="w-full h-full"
+                                        style="  display: flex; flex-direction: column; justify-content: space-around;">
+                                        <div class="px-3">
+                                            <span class="text-white font-700 font-15 ">Bitcoin Dominance</span><br>
+                                            <span style="color: rgba(143, 156, 210, 1);">40.01%</span>
+                                            <span class="text-xs" style="color: rgba(131, 251, 179, 1);">+1,10%</span>
+                                        </div>
+                                        <div style="background-color: #101929; opacity: 90%; border: 1px solid black;"
+                                            class="w-full">
+                                            <div class=" px-3">
+                                                <span class="text-white font-700 font-15">Energy Consumption</span>
+                                                <img src="./assets/image/-high 1.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="px-3">
+                                            <span class="text-white font-700 font-15">24h Transaction</span><br>
+                                            <span style="color: rgba(143, 156, 210, 1);"
+                                                class="text-sm">343,565$</span><span
+                                                style="color: rgba(131, 251, 179, 1);" class="text-xs">+0.17%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- -----------Ethereum-------- -->
+
+                        <div class="topcoin mx-2 subscrollx">
+                            <div style="padding: 0.375rem 1.25rem;">
+                                <div class="justify-between my-25">
+                                    <div><img src="./assets/image/ether.png" alt=""></div>
+                                    <div class="text-sm text-center items-center" style="color:rgba(143, 156, 210, 1);">PoS
+                                    </div>
+                                </div>
+                                <div style="background: rgba(48, 49, 78, 0.67); z-index: 0; padding-top: 0.5rem;"
+                                    class="items-center rounded relative h-230 rounded-xl">
+                                    <div class="absolute justify-align-center"
+                                        style="z-index : -1; height: 100%;">
+                                        <img style="width: 195px;" src="./assets/image/ether1.png" alt="">
+                                    </div>
+                                    <div class="w-full h-full"
+                                        style="  display: flex; flex-direction: column; justify-content: space-around;">
+                                        <div class="px-3">
+                                            <span class="text-white font-700 font-15">Ethereum Dominance</span><br>
+                                            <span style="color: rgba(143, 156, 210, 1);">9.24%</span>
+                                            <span class="text-xs" style="color: rgba(131, 251, 179, 1);">+1,10%</span>
+                                        </div>
+                                        <div style="background-color: #101929; opacity: 90%; border: 1px solid black;"
+                                            class="w-full">
+                                            <div class=" px-3">
+                                                <span class="text-white font-700 font-15">Energy Consumption</span>
+                                                <img src="./assets/image/-high 1.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="px-3">
+                                            <span class="text-white font-700 font-15">TVL</span><br>
+                                            <span style="color: rgba(143, 156, 210, 1);"
+                                                class="text-sm">33,565,898,112$</span><span
+                                                style="color: rgba(131, 251, 179, 1);" class="text-xs">+0.17%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- -----------BNB-------- -->
+
+                        <div class="topcoin subscrollx">
+                            <div style="padding: 0.375rem 1.25rem;">
+                                <div class="justify-between my-25">
+                                    <div>
+                                        <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28.9px"
+                                            height="24.5px" viewBox="0 0 28.9 24.5"
+                                            style="enable-background:new 0 0 28.9 24.5;" xml:space="preserve">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill: url(#Tracciato_5359_1_);
+                                                }
+    
+                                                .st1 {
+                                                    fill: #FFFFFF;
+                                                }
+    
+                                                .st2 {
+                                                    opacity: 0.16;
+                                                    fill: #413D42;
+                                                    enable-background: new;
+                                                }
+    
+                                                .st3 {
+                                                    fill: url(#SVGID_1_);
+                                                }
+                                            </style>
+                                            <g>
+    
+                                                <linearGradient id="Tracciato_5359_1_" gradientUnits="userSpaceOnUse"
+                                                    x1="10.8672" y1="15.6196" x2="19.304" y2="3.455"
+                                                    gradientTransform="matrix(1 0 0 -1 0 23.89)">
+                                                    <stop offset="0" style="stop-color:#F0B90B" />
+                                                    <stop offset="1" style="stop-color:#6F5605" />
+                                                </linearGradient>
+                                                <path id="Tracciato_5359_15_" class="st0" d="M24.9,11.9c-0.1,6.4-5.4,11.6-11.9,11.4C6.6,23.2,1.4,17.9,1.6,11.4S7-0.1,13.4,0
+                S25,5.4,24.9,11.9L24.9,11.9" />
+                                            </g>
+                                            <g>
+                                                <polygon class="st1" points="18,9.3 16.3,8.4 13.4,10 10.5,8.4 8.8,9.3 8.8,11.3 11.7,12.9 11.7,16.3 13.4,17.3 15.1,16.3 
+                15.1,12.9 18,11.3 	" />
+                                                <polygon class="st1"
+                                                    points="19.2,8.6 19.2,10.7 20.8,9.6 20.8,7.6 19.1,6.7 17.4,7.6 	" />
+                                                <polygon class="st1"
+                                                    points="19.1,12 19.1,15.3 16.2,17 16.2,19.1 20.8,16.4 20.8,11 	" />
+                                                <polygon class="st1" points="17.9,14.7 17.9,12.7 16.2,13.6 16.2,15.7 	" />
+                                                <polygon class="st1"
+                                                    points="13.3,5.3 16.2,6.9 17.9,5.9 13.3,3.3 8.8,5.9 10.5,6.9 	" />
+                                                <polygon class="st1"
+                                                    points="7.5,8.6 9.2,7.6 7.6,6.7 5.9,7.6 5.9,9.6 7.5,10.7 	" />
+                                                <polygon class="st1"
+                                                    points="7.6,12 5.8,11 5.8,16.4 10.5,19.1 10.5,17 7.6,15.3 	" />
+                                                <polygon class="st1" points="13.3,8.7 13.3,8.7 13.3,8.7 15.1,7.7 13.3,6.7 13.3,6.7 13.3,6.7 13.3,6.7 13.3,6.7 11.6,7.7 
+                13.3,8.7 	" />
+                                                <polygon class="st1" points="10.4,13.6 8.7,12.7 8.7,14.7 10.4,15.7 	" />
+                                                <polygon class="st1"
+                                                    points="11.6,17.6 11.6,19.7 13.3,20.7 15,19.7 15,17.6 13.3,18.6 	" />
+                                            </g>
+                                            <g>
+                                                <path class="st2" d="M24.4,8.5C20.6,13.3,11.3,19.1,6.3,21c0,0,1.6,1.1,1.5,1l-6.9,1.8c0.2,0.1,0.6,0.3,1.5,0.3s2.2-0.2,4.3-1
+                c2.2-0.9,5-2.3,7.8-3.9c3.9-2.4,8.5-5.7,11.3-8.8L24.4,8.5z" />
+                                                <g>
+    
+                                                    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse"
+                                                        x1="18.2986" y1="6.3493" x2="12.4247" y2="12.9574"
+                                                        gradientTransform="matrix(1 0 0 -1 0 23.89)">
+                                                        <stop offset="0" style="stop-color:#FFC743" />
+                                                        <stop offset="0.5279" style="stop-color:#FCEAC7" />
+                                                        <stop offset="1" style="stop-color:#E3A36E" />
                                                     </linearGradient>
-                                                    <path class="st3"
-                                                        d="M22.4,4.5c0.6-0.2,1.2-0.4,1.8-0.5c1.6-0.3,2.3,0,2.4,0.2c0,0.1,0.4,0.7-0.9,3.1C22.9,12.4,10,20.7,4,22.1
+                                                    <path class="st3" d="M22.4,4.5C23,4.3,23.6,4.1,24.2,4c1.6-0.3,2.3,0,2.4,0.2c0,0.1,0.4,0.7-0.9,3.1C22.9,12.4,10,20.7,4,22.1
                     c-1.2,0.3-1.7,0.2-1.8,0.1c0-0.1,0-0.5,0.5-1.5c0.4-0.7,0.7-1.4,1.2-2.1l-1.2-2.1l-0.5,0.8c-0.6,0.8-1,1.6-1.4,2.4
-                    c-1.4,2.9-0.3,4,0.5,4.4c0.2,0.1,0.6,0.3,1.5,0.3c0.9,0,2.2-0.2,4.3-1c2.2-0.9,5-2.3,7.8-3.9c4.9-3,10.9-7.5,12.9-11.2
+                    c-1.4,2.9-0.3,4,0.5,4.4c0.2,0.1,0.6,0.3,1.5,0.3s2.2-0.2,4.3-1c2.2-0.9,5-2.3,7.8-3.9c4.9-3,10.9-7.5,12.9-11.2
                     C29,5.9,29.2,4.2,28.4,3c-0.8-1.1-2.3-1.5-4.6-1.1c-1,0.2-2.1,0.5-3,0.9C20.8,2.8,21.8,3.8,22.4,4.5" />
                                                 </g>
                                                 <path class="st2"
@@ -393,190 +700,39 @@
                                                 <path class="st2"
                                                     d="M20.8,2.8c0,0,1.2,1.1,1.6,1.7l0.2-0.1c0,0-0.6-1-1.4-1.8C21.2,2.6,21.1,2.6,20.8,2.8z" />
                                             </g>
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div class="text-sm text-center flex items-center"
-                                    style="color:rgba(143, 156, 210, 1);">PoW
-                                </div>
-                            </div>
-                            <div style="background: rgba(48, 49, 78, 0.67); z-index: 0;"
-                                class="flex items-center rounded relative py-2 h-[230px] rounded-xl">
-                                <div class="absolute flex justify-center items-center"
-                                    style="z-index : -1; width: 100%; height: 100%;">
-                                    <img src="./assets/image/ico/Ellipse 42 (1).png" alt="">
-                                </div>
-                                <div class="w-[100%] h-[100%]"
-                                    style="  display: flex; flex-direction: column; justify-content: space-around;">
-                                    <div class="px-3">
-                                        <p class="text-white font-[700] text-[15px] ">Bitcoin Dominance</p>
-                                        <span style="color: rgba(143, 156, 210, 1);">40.01%</span>
-                                        <span class="text-xs" style="color: rgba(131, 251, 179, 1);">+1,10%</span>
+                                        </svg>
                                     </div>
-                                    <div style="background-color: #101929; opacity: 90%; border: 4px solid black;"
-                                        class="w-[100%] px-3">
-                                        <p class="text-white font-[700] text-[15px]">Energy Consumption</p>
-                                        <img src="./assets/image/-high 1.png" alt="">
-                                    </div>
-                                    <div class="px-3">
-                                        <p class="text-white font-[700] text-[15px]">24h Transaction</p>
-                                        <span style="color: rgba(143, 156, 210, 1);"
-                                            class="text-sm">343,565$</span><span style="color: rgba(131, 251, 179, 1);"
-                                            class="text-xs">+0.17%</span>
+                                    <div class="text-sm text-center items-center" style="color:rgba(143, 156, 210, 1);">
+                                        PoSa
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- -----------Ethereum-------- -->
-
-                        <div class="bg-black py-1.5 px-5 h-[305px] w-[235px] mx-2 subscrollx">
-                            <div class="flex justify-between my-2.5">
-                                <div><img src="./assets/image/ether.png" alt=""></div>
-                                <div class="text-sm text-center flex items-center"
-                                    style="color:rgba(143, 156, 210, 1);">PoS
-                                </div>
-                            </div>
-                            <div style="background: rgba(48, 49, 78, 0.67); z-index: 0;"
-                                class="flex items-center rounded relative py-2 h-[230px] rounded-xl">
-                                <div class="absolute flex justify-center items-center"
-                                    style="z-index : -1; width: 100%; height: 100%;">
-                                    <img src="./assets/image/ether1.png" alt="">
-                                </div>
-                                <div class="w-[100%] h-[100%]"
-                                    style="  display: flex; flex-direction: column; justify-content: space-around;">
-                                    <div class="px-3">
-                                        <p class="text-white font-[700] text-[15px]">Ethereum Dominance</p>
-                                        <span style="color: rgba(143, 156, 210, 1);">9.24%</span>
-                                        <span class="text-xs" style="color: rgba(131, 251, 179, 1);">+1,10%</span>
+                                <div style="background: rgba(48, 49, 78, 0.67); z-index: 0; padding-top: 0.5rem;"
+                                    class="items-center rounded relative h-230 rounded-xl">
+                                    <div class="absolute justify-align-center"
+                                        style="z-index : -1; height: 100%;">
+                                        <img style="width: 195px;" src="./assets/image/ico/Ellipse 42 (3).png" alt="">
                                     </div>
-                                    <div style="background-color: #101929; opacity: 90%; border: 4px solid black;"
-                                        class="w-[100%] px-3">
-                                        <p class="text-white font-[700] text-[15px]">Energy Consumption</p>
-                                        <img src="./assets/image/-high 1.png" alt="">
-                                    </div>
-                                    <div class="px-3">
-                                        <p class="text-white font-[700] text-[15px]">TVL</p>
-                                        <span style="color: rgba(143, 156, 210, 1);"
-                                            class="text-sm">33,565,898,112$</span><span
-                                            style="color: rgba(131, 251, 179, 1);" class="text-xs">+0.17%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- -----------BNB-------- -->
-
-                        <div class="bg-black py-1.5 px-5 h-[305px] w-[235px] subscrollx">
-                            <div class="flex justify-between my-2.5">
-                                <div>
-                                    <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28.9px"
-                                        height="24.5px" viewBox="0 0 28.9 24.5"
-                                        style="enable-background:new 0 0 28.9 24.5;" xml:space="preserve">
-                                        <style type="text/css">
-                                            .st0 {
-                                                fill: url(#Tracciato_5359_1_);
-                                            }
-
-                                            .st1 {
-                                                fill: #FFFFFF;
-                                            }
-
-                                            .st2 {
-                                                opacity: 0.16;
-                                                fill: #413D42;
-                                                enable-background: new;
-                                            }
-
-                                            .st3 {
-                                                fill: url(#SVGID_1_);
-                                            }
-                                        </style>
-                                        <g>
-
-                                            <linearGradient id="Tracciato_5359_1_" gradientUnits="userSpaceOnUse"
-                                                x1="10.8672" y1="15.6196" x2="19.304" y2="3.455"
-                                                gradientTransform="matrix(1 0 0 -1 0 23.89)">
-                                                <stop offset="0" style="stop-color:#F0B90B" />
-                                                <stop offset="1" style="stop-color:#6F5605" />
-                                            </linearGradient>
-                                            <path id="Tracciato_5359_15_" class="st0" d="M24.9,11.9c-0.1,6.4-5.4,11.6-11.9,11.4C6.6,23.2,1.4,17.9,1.6,11.4S7-0.1,13.4,0
-            S25,5.4,24.9,11.9L24.9,11.9" />
-                                        </g>
-                                        <g>
-                                            <polygon class="st1" points="18,9.3 16.3,8.4 13.4,10 10.5,8.4 8.8,9.3 8.8,11.3 11.7,12.9 11.7,16.3 13.4,17.3 15.1,16.3 
-            15.1,12.9 18,11.3 	" />
-                                            <polygon class="st1"
-                                                points="19.2,8.6 19.2,10.7 20.8,9.6 20.8,7.6 19.1,6.7 17.4,7.6 	" />
-                                            <polygon class="st1"
-                                                points="19.1,12 19.1,15.3 16.2,17 16.2,19.1 20.8,16.4 20.8,11 	" />
-                                            <polygon class="st1" points="17.9,14.7 17.9,12.7 16.2,13.6 16.2,15.7 	" />
-                                            <polygon class="st1"
-                                                points="13.3,5.3 16.2,6.9 17.9,5.9 13.3,3.3 8.8,5.9 10.5,6.9 	" />
-                                            <polygon class="st1"
-                                                points="7.5,8.6 9.2,7.6 7.6,6.7 5.9,7.6 5.9,9.6 7.5,10.7 	" />
-                                            <polygon class="st1"
-                                                points="7.6,12 5.8,11 5.8,16.4 10.5,19.1 10.5,17 7.6,15.3 	" />
-                                            <polygon class="st1" points="13.3,8.7 13.3,8.7 13.3,8.7 15.1,7.7 13.3,6.7 13.3,6.7 13.3,6.7 13.3,6.7 13.3,6.7 11.6,7.7 
-            13.3,8.7 	" />
-                                            <polygon class="st1" points="10.4,13.6 8.7,12.7 8.7,14.7 10.4,15.7 	" />
-                                            <polygon class="st1"
-                                                points="11.6,17.6 11.6,19.7 13.3,20.7 15,19.7 15,17.6 13.3,18.6 	" />
-                                        </g>
-                                        <g>
-                                            <path class="st2" d="M24.4,8.5C20.6,13.3,11.3,19.1,6.3,21c0,0,1.6,1.1,1.5,1l-6.9,1.8c0.2,0.1,0.6,0.3,1.5,0.3s2.2-0.2,4.3-1
-            c2.2-0.9,5-2.3,7.8-3.9c3.9-2.4,8.5-5.7,11.3-8.8L24.4,8.5z" />
-                                            <g>
-
-                                                <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse"
-                                                    x1="18.2986" y1="6.3493" x2="12.4247" y2="12.9574"
-                                                    gradientTransform="matrix(1 0 0 -1 0 23.89)">
-                                                    <stop offset="0" style="stop-color:#FFC743" />
-                                                    <stop offset="0.5279" style="stop-color:#FCEAC7" />
-                                                    <stop offset="1" style="stop-color:#E3A36E" />
-                                                </linearGradient>
-                                                <path class="st3" d="M22.4,4.5C23,4.3,23.6,4.1,24.2,4c1.6-0.3,2.3,0,2.4,0.2c0,0.1,0.4,0.7-0.9,3.1C22.9,12.4,10,20.7,4,22.1
-                c-1.2,0.3-1.7,0.2-1.8,0.1c0-0.1,0-0.5,0.5-1.5c0.4-0.7,0.7-1.4,1.2-2.1l-1.2-2.1l-0.5,0.8c-0.6,0.8-1,1.6-1.4,2.4
-                c-1.4,2.9-0.3,4,0.5,4.4c0.2,0.1,0.6,0.3,1.5,0.3s2.2-0.2,4.3-1c2.2-0.9,5-2.3,7.8-3.9c4.9-3,10.9-7.5,12.9-11.2
-                C29,5.9,29.2,4.2,28.4,3c-0.8-1.1-2.3-1.5-4.6-1.1c-1,0.2-2.1,0.5-3,0.9C20.8,2.8,21.8,3.8,22.4,4.5" />
-                                            </g>
-                                            <path class="st2"
-                                                d="M3.2,19.8c0,0-0.9-0.9-1.4-1.9l0.9-1.3c0,0,0.7,1.3,1.3,2L3.2,19.8z" />
-                                            <path class="st2"
-                                                d="M20.8,2.8c0,0,1.2,1.1,1.6,1.7l0.2-0.1c0,0-0.6-1-1.4-1.8C21.2,2.6,21.1,2.6,20.8,2.8z" />
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div class="text-sm text-center flex items-center"
-                                    style="color:rgba(143, 156, 210, 1);">
-                                    PoSa
-                                </div>
-                            </div>
-                            <div style="background: rgba(48, 49, 78, 0.67); z-index: 0;"
-                                class="flex items-center rounded relative py-2 h-[230px] rounded-xl">
-                                <div class="absolute flex justify-center items-center"
-                                    style="z-index : -1; width: 100%; height: 100%;">
-                                    <img src="./assets/image/ico/Ellipse 42 (3).png" alt="">
-                                </div>
-                                <div class="w-[100%] h-[100%]"
-                                    style="  display: flex; flex-direction: column; justify-content: space-around;">
-                                    <div class="px-3">
-                                        <p class="text-white font-[700] text-[15px]">BNB Dominance</p>
-                                        <span style="color: rgba(143, 156, 210, 1);"
-                                            class=" font-[400] text-[15px]">2.66%</span>
-                                        <span class="text-xs" style="color: rgba(131, 251, 179, 1);">+1,10%</span>
-                                    </div>
-                                    <div style="background-color: #101929; opacity: 90%; border: 4px solid black;"
-                                        class="w-[100%] px-3">
-                                        <p class="text-white font-[700] text-[15px]">Energy Consumption</p>
-                                        <img src="./assets/image/high 1.png" alt="">
-                                    </div>
-                                    <div class="px-3">
-                                        <p class="text-white font-[700] text-[15px]">TVL</p>
-                                        <span style="color: rgba(143, 156, 210, 1);"
-                                            class="text-sm font-[400] text-[15px]">33,565,898,112$</span><span
-                                            style="color: rgba(131, 251, 179, 1);" class="text-xs">+0.17%</span>
+                                    <div class="w-full h-full"
+                                        style="  display: flex; flex-direction: column; justify-content: space-around;">
+                                        <div class="px-3">
+                                            <span class="text-white font-700 font-15">BNB Dominance</span><br>
+                                            <span style="color: rgba(143, 156, 210, 1);"
+                                                class=" font-400 font-15">2.66%</span>
+                                            <span class="text-xs" style="color: rgba(131, 251, 179, 1);">+1,10%</span>
+                                        </div>
+                                        <div style="background-color: #101929; opacity: 90%; border: 1px solid black;"
+                                            class="w-full">
+                                            <div class=" px-3">
+                                                <span class="text-white font-700 font-15">Energy Consumption</span>
+                                                <img src="./assets/image/high 1.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="px-3">
+                                            <span class="text-white font-700 font-15">TVL</span><br>
+                                            <span style="color: rgba(143, 156, 210, 1);"
+                                                class="text-sm font-400 font-15">33,565,898,112$</span><span
+                                                style="color: rgba(131, 251, 179, 1);" class="text-xs">+0.17%</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -584,36 +740,39 @@
 
                         <!-- -----------Ethereum-------- -->
 
-                        <div class="bg-black py-1.5 px-5 h-[305px] w-[235px] mx-2 subscrollx">
-                            <div class="flex justify-between my-2.5">
-                                <div><img src="./assets/image/ether.png" alt=""></div>
-                                <div class="text-sm text-center flex items-center"
-                                    style="color:rgba(143, 156, 210, 1);">PoS
-                                </div>
-                            </div>
-                            <div style="background: rgba(48, 49, 78, 0.67); z-index: 0;"
-                                class="flex items-center rounded relative py-2 h-[230px] rounded-xl">
-                                <div class="absolute flex justify-center items-center"
-                                    style="z-index : -1; width: 100%; height: 100%;">
-                                    <img src="./assets/image/ether1.png" alt="">
-                                </div>
-                                <div class="w-[100%] h-[100%]"
-                                    style="  display: flex; flex-direction: column; justify-content: space-around;">
-                                    <div class="px-3">
-                                        <p class="text-white font-[700] text-[15px]">Ethereum Dominance</p>
-                                        <span style="color: rgba(143, 156, 210, 1);">9.24%</span>
-                                        <span class="text-xs" style="color: rgba(131, 251, 179, 1);">+1,10%</span>
+                        <div class="topcoin mx-2 subscrollx">
+                            <div style="padding: 0.375rem 1.25rem;">
+                                <div class="justify-between my-25">
+                                    <div><img src="./assets/image/ether.png" alt=""></div>
+                                    <div class="text-sm text-center items-center" style="color:rgba(143, 156, 210, 1);">PoS
                                     </div>
-                                    <div style="background-color: #101929; opacity: 90%; border: 4px solid black;"
-                                        class="w-[100%] px-3">
-                                        <p class="text-white font-[700] text-[15px]">Energy Consumption</p>
-                                        <img src="./assets/image/-high 1.png" alt="">
+                                </div>
+                                <div style="background: rgba(48, 49, 78, 0.67); z-index: 0; padding-top: 0.5rem;"
+                                    class="items-center rounded relative h-230 rounded-xl">
+                                    <div class="absolute justify-align-center"
+                                        style="z-index : -1; height: 100%;">
+                                        <img style="width: 195px;" src="./assets/image/ether1.png" alt="">
                                     </div>
-                                    <div class="px-3">
-                                        <p class="text-white font-[700] text-[15px]">TVL</p>
-                                        <span style="color: rgba(143, 156, 210, 1);"
-                                            class="text-sm">33,565,898,112$</span><span
-                                            style="color: rgba(131, 251, 179, 1);" class="text-xs">+0.17%</span>
+                                    <div class="w-full h-full"
+                                        style="  display: flex; flex-direction: column; justify-content: space-around;">
+                                        <div class="px-3">
+                                            <span class="text-white font-700 font-15">Ethereum Dominance</span><br>
+                                            <span style="color: rgba(143, 156, 210, 1);">9.24%</span>
+                                            <span class="text-xs" style="color: rgba(131, 251, 179, 1);">+1,10%</span>
+                                        </div>
+                                        <div style="background-color: #101929; opacity: 90%; border: 1px solid black;"
+                                            class="w-full">
+                                            <div class=" px-3">
+                                                <span class="text-white font-700 font-15">Energy Consumption</span>
+                                                <img src="./assets/image/-high 1.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="px-3">
+                                            <span class="text-white font-700 font-15">TVL</span><br>
+                                            <span style="color: rgba(143, 156, 210, 1);"
+                                                class="text-sm">33,565,898,112$</span><span
+                                                style="color: rgba(131, 251, 179, 1);" class="text-xs">+0.17%</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -621,116 +780,119 @@
 
                         <!-- -----------BNB-------- -->
 
-                        <div class="bg-black py-1.5 px-5 h-[305px] w-[235px] subscrollx">
-                            <div class="flex justify-between my-2.5">
-                                <div>
-                                    <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28.9px"
-                                        height="24.5px" viewBox="0 0 28.9 24.5"
-                                        style="enable-background:new 0 0 28.9 24.5;" xml:space="preserve">
-                                        <style type="text/css">
-                                            .st0 {
-                                                fill: url(#Tracciato_5359_1_);
-                                            }
-
-                                            .st1 {
-                                                fill: #FFFFFF;
-                                            }
-
-                                            .st2 {
-                                                opacity: 0.16;
-                                                fill: #413D42;
-                                                enable-background: new;
-                                            }
-
-                                            .st3 {
-                                                fill: url(#SVGID_1_);
-                                            }
-                                        </style>
-                                        <g>
-
-                                            <linearGradient id="Tracciato_5359_1_" gradientUnits="userSpaceOnUse"
-                                                x1="10.8672" y1="15.6196" x2="19.304" y2="3.455"
-                                                gradientTransform="matrix(1 0 0 -1 0 23.89)">
-                                                <stop offset="0" style="stop-color:#F0B90B" />
-                                                <stop offset="1" style="stop-color:#6F5605" />
-                                            </linearGradient>
-                                            <path id="Tracciato_5359_15_" class="st0" d="M24.9,11.9c-0.1,6.4-5.4,11.6-11.9,11.4C6.6,23.2,1.4,17.9,1.6,11.4S7-0.1,13.4,0
-            S25,5.4,24.9,11.9L24.9,11.9" />
-                                        </g>
-                                        <g>
-                                            <polygon class="st1" points="18,9.3 16.3,8.4 13.4,10 10.5,8.4 8.8,9.3 8.8,11.3 11.7,12.9 11.7,16.3 13.4,17.3 15.1,16.3 
-            15.1,12.9 18,11.3 	" />
-                                            <polygon class="st1"
-                                                points="19.2,8.6 19.2,10.7 20.8,9.6 20.8,7.6 19.1,6.7 17.4,7.6 	" />
-                                            <polygon class="st1"
-                                                points="19.1,12 19.1,15.3 16.2,17 16.2,19.1 20.8,16.4 20.8,11 	" />
-                                            <polygon class="st1" points="17.9,14.7 17.9,12.7 16.2,13.6 16.2,15.7 	" />
-                                            <polygon class="st1"
-                                                points="13.3,5.3 16.2,6.9 17.9,5.9 13.3,3.3 8.8,5.9 10.5,6.9 	" />
-                                            <polygon class="st1"
-                                                points="7.5,8.6 9.2,7.6 7.6,6.7 5.9,7.6 5.9,9.6 7.5,10.7 	" />
-                                            <polygon class="st1"
-                                                points="7.6,12 5.8,11 5.8,16.4 10.5,19.1 10.5,17 7.6,15.3 	" />
-                                            <polygon class="st1" points="13.3,8.7 13.3,8.7 13.3,8.7 15.1,7.7 13.3,6.7 13.3,6.7 13.3,6.7 13.3,6.7 13.3,6.7 11.6,7.7 
-            13.3,8.7 	" />
-                                            <polygon class="st1" points="10.4,13.6 8.7,12.7 8.7,14.7 10.4,15.7 	" />
-                                            <polygon class="st1"
-                                                points="11.6,17.6 11.6,19.7 13.3,20.7 15,19.7 15,17.6 13.3,18.6 	" />
-                                        </g>
-                                        <g>
-                                            <path class="st2" d="M24.4,8.5C20.6,13.3,11.3,19.1,6.3,21c0,0,1.6,1.1,1.5,1l-6.9,1.8c0.2,0.1,0.6,0.3,1.5,0.3s2.2-0.2,4.3-1
-            c2.2-0.9,5-2.3,7.8-3.9c3.9-2.4,8.5-5.7,11.3-8.8L24.4,8.5z" />
+                        <div class="topcoin subscrollx">
+                            <div style="padding: 0.375rem 1.25rem;">
+                                <div class="justify-between my-25">
+                                    <div>
+                                        <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28.9px"
+                                            height="24.5px" viewBox="0 0 28.9 24.5"
+                                            style="enable-background:new 0 0 28.9 24.5;" xml:space="preserve">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill: url(#Tracciato_5359_1_);
+                                                }
+    
+                                                .st1 {
+                                                    fill: #FFFFFF;
+                                                }
+    
+                                                .st2 {
+                                                    opacity: 0.16;
+                                                    fill: #413D42;
+                                                    enable-background: new;
+                                                }
+    
+                                                .st3 {
+                                                    fill: url(#SVGID_1_);
+                                                }
+                                            </style>
                                             <g>
-
-                                                <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse"
-                                                    x1="18.2986" y1="6.3493" x2="12.4247" y2="12.9574"
+    
+                                                <linearGradient id="Tracciato_5359_1_" gradientUnits="userSpaceOnUse"
+                                                    x1="10.8672" y1="15.6196" x2="19.304" y2="3.455"
                                                     gradientTransform="matrix(1 0 0 -1 0 23.89)">
-                                                    <stop offset="0" style="stop-color:#FFC743" />
-                                                    <stop offset="0.5279" style="stop-color:#FCEAC7" />
-                                                    <stop offset="1" style="stop-color:#E3A36E" />
+                                                    <stop offset="0" style="stop-color:#F0B90B" />
+                                                    <stop offset="1" style="stop-color:#6F5605" />
                                                 </linearGradient>
-                                                <path class="st3" d="M22.4,4.5C23,4.3,23.6,4.1,24.2,4c1.6-0.3,2.3,0,2.4,0.2c0,0.1,0.4,0.7-0.9,3.1C22.9,12.4,10,20.7,4,22.1
-                c-1.2,0.3-1.7,0.2-1.8,0.1c0-0.1,0-0.5,0.5-1.5c0.4-0.7,0.7-1.4,1.2-2.1l-1.2-2.1l-0.5,0.8c-0.6,0.8-1,1.6-1.4,2.4
-                c-1.4,2.9-0.3,4,0.5,4.4c0.2,0.1,0.6,0.3,1.5,0.3s2.2-0.2,4.3-1c2.2-0.9,5-2.3,7.8-3.9c4.9-3,10.9-7.5,12.9-11.2
-                C29,5.9,29.2,4.2,28.4,3c-0.8-1.1-2.3-1.5-4.6-1.1c-1,0.2-2.1,0.5-3,0.9C20.8,2.8,21.8,3.8,22.4,4.5" />
+                                                <path id="Tracciato_5359_15_" class="st0" d="M24.9,11.9c-0.1,6.4-5.4,11.6-11.9,11.4C6.6,23.2,1.4,17.9,1.6,11.4S7-0.1,13.4,0
+                S25,5.4,24.9,11.9L24.9,11.9" />
                                             </g>
-                                            <path class="st2"
-                                                d="M3.2,19.8c0,0-0.9-0.9-1.4-1.9l0.9-1.3c0,0,0.7,1.3,1.3,2L3.2,19.8z" />
-                                            <path class="st2"
-                                                d="M20.8,2.8c0,0,1.2,1.1,1.6,1.7l0.2-0.1c0,0-0.6-1-1.4-1.8C21.2,2.6,21.1,2.6,20.8,2.8z" />
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div class="text-sm text-center flex items-center"
-                                    style="color:rgba(143, 156, 210, 1);">
-                                    PoSa
-                                </div>
-                            </div>
-                            <div style="background: rgba(48, 49, 78, 0.67); z-index: 0;"
-                                class="flex items-center rounded relative py-2 h-[230px] rounded-xl">
-                                <div class="absolute flex justify-center items-center"
-                                    style="z-index : -1; width: 100%; height: 100%;">
-                                    <img src="./assets/image/ico/Ellipse 42 (3).png" alt="">
-                                </div>
-                                <div class="w-[100%] h-[100%]"
-                                    style="  display: flex; flex-direction: column; justify-content: space-around;">
-                                    <div class="px-3">
-                                        <p class="text-white font-[700] text-[15px]">BNB Dominance</p>
-                                        <span style="color: rgba(143, 156, 210, 1);"
-                                            class=" font-[400] text-[15px]">2.66%</span>
-                                        <span class="text-xs" style="color: rgba(131, 251, 179, 1);">+1,10%</span>
+                                            <g>
+                                                <polygon class="st1" points="18,9.3 16.3,8.4 13.4,10 10.5,8.4 8.8,9.3 8.8,11.3 11.7,12.9 11.7,16.3 13.4,17.3 15.1,16.3 
+                15.1,12.9 18,11.3 	" />
+                                                <polygon class="st1"
+                                                    points="19.2,8.6 19.2,10.7 20.8,9.6 20.8,7.6 19.1,6.7 17.4,7.6 	" />
+                                                <polygon class="st1"
+                                                    points="19.1,12 19.1,15.3 16.2,17 16.2,19.1 20.8,16.4 20.8,11 	" />
+                                                <polygon class="st1" points="17.9,14.7 17.9,12.7 16.2,13.6 16.2,15.7 	" />
+                                                <polygon class="st1"
+                                                    points="13.3,5.3 16.2,6.9 17.9,5.9 13.3,3.3 8.8,5.9 10.5,6.9 	" />
+                                                <polygon class="st1"
+                                                    points="7.5,8.6 9.2,7.6 7.6,6.7 5.9,7.6 5.9,9.6 7.5,10.7 	" />
+                                                <polygon class="st1"
+                                                    points="7.6,12 5.8,11 5.8,16.4 10.5,19.1 10.5,17 7.6,15.3 	" />
+                                                <polygon class="st1" points="13.3,8.7 13.3,8.7 13.3,8.7 15.1,7.7 13.3,6.7 13.3,6.7 13.3,6.7 13.3,6.7 13.3,6.7 11.6,7.7 
+                13.3,8.7 	" />
+                                                <polygon class="st1" points="10.4,13.6 8.7,12.7 8.7,14.7 10.4,15.7 	" />
+                                                <polygon class="st1"
+                                                    points="11.6,17.6 11.6,19.7 13.3,20.7 15,19.7 15,17.6 13.3,18.6 	" />
+                                            </g>
+                                            <g>
+                                                <path class="st2" d="M24.4,8.5C20.6,13.3,11.3,19.1,6.3,21c0,0,1.6,1.1,1.5,1l-6.9,1.8c0.2,0.1,0.6,0.3,1.5,0.3s2.2-0.2,4.3-1
+                c2.2-0.9,5-2.3,7.8-3.9c3.9-2.4,8.5-5.7,11.3-8.8L24.4,8.5z" />
+                                                <g>
+    
+                                                    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse"
+                                                        x1="18.2986" y1="6.3493" x2="12.4247" y2="12.9574"
+                                                        gradientTransform="matrix(1 0 0 -1 0 23.89)">
+                                                        <stop offset="0" style="stop-color:#FFC743" />
+                                                        <stop offset="0.5279" style="stop-color:#FCEAC7" />
+                                                        <stop offset="1" style="stop-color:#E3A36E" />
+                                                    </linearGradient>
+                                                    <path class="st3" d="M22.4,4.5C23,4.3,23.6,4.1,24.2,4c1.6-0.3,2.3,0,2.4,0.2c0,0.1,0.4,0.7-0.9,3.1C22.9,12.4,10,20.7,4,22.1
+                    c-1.2,0.3-1.7,0.2-1.8,0.1c0-0.1,0-0.5,0.5-1.5c0.4-0.7,0.7-1.4,1.2-2.1l-1.2-2.1l-0.5,0.8c-0.6,0.8-1,1.6-1.4,2.4
+                    c-1.4,2.9-0.3,4,0.5,4.4c0.2,0.1,0.6,0.3,1.5,0.3s2.2-0.2,4.3-1c2.2-0.9,5-2.3,7.8-3.9c4.9-3,10.9-7.5,12.9-11.2
+                    C29,5.9,29.2,4.2,28.4,3c-0.8-1.1-2.3-1.5-4.6-1.1c-1,0.2-2.1,0.5-3,0.9C20.8,2.8,21.8,3.8,22.4,4.5" />
+                                                </g>
+                                                <path class="st2"
+                                                    d="M3.2,19.8c0,0-0.9-0.9-1.4-1.9l0.9-1.3c0,0,0.7,1.3,1.3,2L3.2,19.8z" />
+                                                <path class="st2"
+                                                    d="M20.8,2.8c0,0,1.2,1.1,1.6,1.7l0.2-0.1c0,0-0.6-1-1.4-1.8C21.2,2.6,21.1,2.6,20.8,2.8z" />
+                                            </g>
+                                        </svg>
                                     </div>
-                                    <div style="background-color: #101929; opacity: 90%; border: 4px solid black;"
-                                        class="w-[100%] px-3">
-                                        <p class="text-white font-[700] text-[15px]">Energy Consumption</p>
-                                        <img src="./assets/image/high 1.png" alt="">
+                                    <div class="text-sm text-center items-center" style="color:rgba(143, 156, 210, 1);">
+                                        PoSa
                                     </div>
-                                    <div class="px-3">
-                                        <p class="text-white font-[700] text-[15px]">TVL</p>
-                                        <span style="color: rgba(143, 156, 210, 1);"
-                                            class="text-sm font-[400] text-[15px]">33,565,898,112$</span><span
-                                            style="color: rgba(131, 251, 179, 1);" class="text-xs">+0.17%</span>
+                                </div>
+                                <div style="background: rgba(48, 49, 78, 0.67); z-index: 0; padding-top: 0.5rem;"
+                                    class="items-center rounded relative h-230 rounded-xl">
+                                    <div class="absolute justify-align-center"
+                                        style="z-index : -1; height: 100%;">
+                                        <img style="width: 195px;" src="./assets/image/ico/Ellipse 42 (3).png" alt="">
+                                    </div>
+                                    <div class="w-full h-full"
+                                        style="  display: flex; flex-direction: column; justify-content: space-around;">
+                                        <div class="px-3">
+                                            <span class="text-white font-700 font-15">BNB Dominance</span><br>
+                                            <span style="color: rgba(143, 156, 210, 1);"
+                                                class=" font-400 font-15">2.66%</span>
+                                            <span class="text-xs" style="color: rgba(131, 251, 179, 1);">+1,10%</span>
+                                        </div>
+                                        <div style="background-color: #101929; opacity: 90%; border: 1px solid black;"
+                                            class="w-full">
+                                            <div class=" px-3">
+                                                <span class="text-white font-700 font-15">Energy Consumption</span>
+                                                <img src="./assets/image/high 1.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="px-3">
+                                            <span class="text-white font-700 font-15">TVL</span><br>
+                                            <span style="color: rgba(143, 156, 210, 1);"
+                                                class="text-sm font-400 font-15">33,565,898,112$</span><span
+                                                style="color: rgba(131, 251, 179, 1);" class="text-xs">+0.17%</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -740,31 +902,31 @@
 
                 <!-- latest and market -->
 
-                <div class="lg:col-span-8 xl:col-span-7 2xl:col-span-5">
+                <div class="latestmarket">
                     <div class="">
-                        <div class="block 2xl:flex justify-around">
+                        <div class="latest justify-around">
                             <div class="">
 
                                 <!-- latest news -->
 
                                 <div class="my-5">
-                                    <button class="flex border border-gray-600 rounded py-2 px-2">
-                                        <p class="text-white text-[15px]">Latest News</p>
-                                        <div class="flex items-center justify-center w-[24px] h-[24px]">
+                                    <button class="topprotocal">
+                                        <span class="text-white font-15">Latest News</span>
+                                        <div class="justify-align-center w-24 h-24">
                                             <img src="./assets/image/Icone_Side-Menu/Icon.svg" alt="">
                                         </div>
                                     </button>
                                 </div>
 
                                 <!-- news content -->
-                                <div class="flex scrollx 2xl:block 2xl:scroll h-[120px] 2xl:h-[305px]">
-                                    <div class="flex h-[120px] w-[305px] mr-2 2xl:mr-0 mb-2 justify-between subscrollx" style="background: #242839;">
-                                        <div class="w-[100%]">
-                                            <img class="w-[120px] h-[120px]" src="./assets/image/ico/Image (1).png"
-                                                alt="">
+                                <div class="news">
+                                    <div class="h-120 w-305 subnews mb-2 justify-between subscrollx"
+                                        style="background: #242839;">
+                                        <div class="w-full">
+                                            <img class="w-120 h-120" src="./assets/image/ico/Image (1).png" alt="">
                                         </div>
                                         <div class="p-1">
-                                            <div class="flex justify-between">
+                                            <div class="justify-between">
                                                 <p class="text-white" style="font-size:15px;">Reuters</p>
                                                 <p style="color: rgba(154, 192, 165, 1); font-size: 9px;">neutral</p>
                                             </div>
@@ -773,13 +935,13 @@
                                             <div style="color: rgba(92, 136, 242, 1); font-size: 11px;">Read More</div>
                                         </div>
                                     </div>
-                                    <div class="flex h-[120px] w-[305px] mr-2 2xl:mr-0 mb-2 subscrollx" style="background: #242839;">
-                                        <div class="w-[100%]">
-                                            <img class="w-[120px] h-[120px]" src="./assets/image/ico/Image (2).png"
-                                                alt="">
+                                    <div class="h-120 w-305 subnews mb-2 justify-between subscrollx"
+                                        style="background: #242839;">
+                                        <div class="w-full">
+                                            <img class="w-120 h-120" src="./assets/image/ico/Image (2).png" alt="">
                                         </div>
                                         <div class="p-1">
-                                            <div class="flex justify-between">
+                                            <div class="justify-between">
                                                 <p class="text-white" style="font-size:15px;">Reuters</p>
                                                 <p style="color: rgba(154, 192, 165, 1); font-size: 9px;">neutral</p>
                                             </div>
@@ -788,13 +950,13 @@
                                             <div style="color: rgba(92, 136, 242, 1); font-size: 11px;">Read More</div>
                                         </div>
                                     </div>
-                                    <div class="flex h-[120px] w-[305px] mr-2 2xl:mr-0 mb-2 subscrollx" style="background: #242839;">
-                                        <div class="w-[100%]">
-                                            <img class="w-[120px] h-[120px]" src="./assets/image/ico/Image (1).png"
-                                                alt="">
+                                    <div class="h-120 w-305 subnews mb-2 justify-between subscrollx"
+                                        style="background: #242839;">
+                                        <div class="w-full">
+                                            <img class="w-120 h-120" src="./assets/image/ico/Image (1).png" alt="">
                                         </div>
                                         <div class="p-1">
-                                            <div class="flex justify-between">
+                                            <div class="justify-between">
                                                 <p class="text-white" style="font-size:15px;">Reuters</p>
                                                 <p style="color: rgba(154, 192, 165, 1); font-size: 9px;">neutral</p>
                                             </div>
@@ -803,13 +965,13 @@
                                             <div style="color: rgba(92, 136, 242, 1); font-size: 11px;">Read More</div>
                                         </div>
                                     </div>
-                                    <div class="flex h-[120px] w-[305px] mr-2 2xl:mr-0 mb-2 subscrollx" style="background: #242839;">
-                                        <div class="w-[100%]">
-                                            <img class="w-[120px] h-[120px]" src="./assets/image/ico/Image (2).png"
-                                                alt="">
+                                    <div class="h-120 w-305 subnews mb-2 justify-between subscrollx"
+                                        style="background: #242839;">
+                                        <div class="w-full">
+                                            <img class="w-120 h-120" src="./assets/image/ico/Image (2).png" alt="">
                                         </div>
                                         <div class="p-1">
-                                            <div class="flex justify-between">
+                                            <div class="justify-between">
                                                 <p class="text-white" style="font-size:15px;">Reuters</p>
                                                 <p style="color: rgba(154, 192, 165, 1); font-size: 9px;">neutral</p>
                                             </div>
@@ -818,13 +980,28 @@
                                             <div style="color: rgba(92, 136, 242, 1); font-size: 11px;">Read More</div>
                                         </div>
                                     </div>
-                                    <div class="flex h-[120px] w-[305px] mr-2 2xl:mr-0 mb-2 subscrollx" style="background: #242839;">
-                                        <div class="w-[100%]">
-                                            <img class="w-[120px] h-[120px]" src="./assets/image/ico/Image (1).png"
-                                                alt="">
+                                    <div class="h-120 w-305 subnews mb-2 justify-between subscrollx"
+                                        style="background: #242839;">
+                                        <div class="w-full">
+                                            <img class="w-120 h-120" src="./assets/image/ico/Image (1).png" alt="">
                                         </div>
                                         <div class="p-1">
-                                            <div class="flex justify-between">
+                                            <div class="justify-between">
+                                                <p class="text-white" style="font-size:15px;">Reuters</p>
+                                                <p style="color: rgba(154, 192, 165, 1); font-size: 9px;">neutral</p>
+                                            </div>
+                                            <div style="color: rgba(135, 149, 207, 1); font-size: 13px;">Binance CEO
+                                                Zhao: Significant interest in crypto industry recovery fund</div>
+                                            <div style="color: rgba(92, 136, 242, 1); font-size: 11px;">Read More</div>
+                                        </div>
+                                    </div>
+                                    <div class="h-120 w-305 subnews mb-2 justify-between subscrollx"
+                                        style="background: #242839;">
+                                        <div class="w-full">
+                                            <img class="w-120 h-120" src="./assets/image/ico/Image (2).png" alt="">
+                                        </div>
+                                        <div class="p-1">
+                                            <div class="justify-between">
                                                 <p class="text-white" style="font-size:15px;">Reuters</p>
                                                 <p style="color: rgba(154, 192, 165, 1); font-size: 9px;">neutral</p>
                                             </div>
@@ -839,128 +1016,185 @@
 
                                 <!-- Market Info -->
                                 <div class="my-5">
-                                    <button class="flex border border-gray-600 rounded py-2 px-2">
-                                        <p class="text-white text-[15px]">Market Info</p>
-                                        <div class="flex items-center justify-center w-[24px] h-[24px]">
+                                    <button class="topprotocal">
+                                        <span class="text-white font-15">Market Info</span>
+                                        <div class="justify-align-center w-24 h-24">
                                             <img src="./assets/image/Icone_Side-Menu/Icon.svg" alt="">
                                         </div>
                                     </button>
                                 </div>
 
                                 <!-- Market Content -->
-                                <div class="flex scrollx 2xl:block 2xl:scroll h-[120px] 2xl:h-[305px]">
-                                    <div class="mb-3 w-[200px] subscrollx mr-2 2xl:mr-0"
+                                <div class="news">
+                                    <div class="mb-3 w-200 subscrollx subnews"
                                         style="background-image: url(./assets/image/Frame29.png); background-repeat: no-repeat;">
-                                        <div class="w-[100%]">
+                                        <div class="w-full">
                                             <div class="px-6 py-4">
-                                                <p class="text-white">Market Sentiment</p>
-                                                <p style="color: rgba(255, 255, 255, 0.41);" class="pb-2">fear & gread
-                                                    index</p>
+                                                <span class="text-white">Market Sentiment</span><br>
+                                                <span style="color: rgba(255, 255, 255, 0.41);" class="pb-2">fear & gread
+                                                    index</span><br>
                                                 <span>Extreme fear</span><span>23</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mb-3 w-[200px] subscrollx mr-2 2xl:mr-0"
+                                    <div class="mb-3 w-200 subscrollx subnews"
                                         style="background-image: url(./assets/image/Frame29.png); background-repeat: no-repeat;">
-                                        <div class="w-[100%]">
+                                        <div class="w-full">
                                             <div class="px-6 py-4">
-                                                <p class="text-white">News in Crypto</p>
-                                                <p style="color: rgba(255, 255, 255, 0.41);" class="pb-2">sentiment
-                                                    index</p>
-                                                <div class="flex items-center justify-around">
-                                                    <button class="flex rounded p-1 items-center" style="background: linear-gradient(180deg, #36F761 0%, rgba(96, 254, 197, 0.23) 100%);">
-                                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                                                        <p class="text-white text-[12px]">38.5%</p>
+                                                <span class="text-white">News in Crypto</span>
+                                                <span style="color: rgba(255, 255, 255, 0.41);" class="pb-2">sentiment
+                                                    index</span>
+                                                <div class="items-center-around">
+                                                    <button class="rounded p-1 items-center"
+                                                        style="background: linear-gradient(180deg, #36F761 0%, rgba(96, 254, 197, 0.23) 100%);">
+                                                        <svg class="w-4 h-4 text-white" fill="currentColor"
+                                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd"
+                                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                                clip-rule="evenodd"></path>
+                                                        </svg>
+                                                        <span class="text-white font-12">38.5%</span>
                                                     </button>
-                                                    <button class="flex rounded p-1 ml-1 items-center" style="background: linear-gradient(180deg, #F73636 0%, rgba(254, 96, 219, 0.23) 100%);">
-                                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                                                        <p class="text-white text-[12px]">61.5%</p>
+                                                    <button class="rounded p-1 ml-1 items-center"
+                                                        style="background: linear-gradient(180deg, #F73636 0%, rgba(254, 96, 219, 0.23) 100%);">
+                                                        <svg class="w-4 h-4 text-white" fill="currentColor"
+                                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd"
+                                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                                clip-rule="evenodd"></path>
+                                                        </svg>
+                                                        <span class="text-white font-12">61.5%</span>
                                                     </button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mb-3 w-[200px] subscrollx mr-2 2xl:mr-0"
+                                    <div class="mb-3 w-200 subscrollx subnews"
                                         style="background-image: url(./assets/image/Frame29.png); background-repeat: no-repeat;">
-                                        <div class="w-[100%]">
+                                        <div class="w-full">
                                             <div class="px-6 py-4">
-                                                <p class="text-white">Market Cricle</p>
-                                                <p style="color: rgba(255, 255, 255, 0.41);" class="pb-2">Market
-                                                    index</p>
+                                                <span class="text-white">Market Sentiment</span><br>
+                                                <span style="color: rgba(255, 255, 255, 0.41);" class="pb-2">fear & gread
+                                                    index</span><br>
                                                 <span>Extreme fear</span><span>23</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mb-3 w-[200px] subscrollx mr-2 2xl:mr-0"
+                                    <div class="mb-3 w-200 subscrollx subnews"
                                         style="background-image: url(./assets/image/Frame29.png); background-repeat: no-repeat;">
-                                        <div class="w-[100%]">
+                                        <div class="w-full">
                                             <div class="px-6 py-4">
-                                                <p class="text-white">News in Crypto</p>
-                                                <p style="color: rgba(255, 255, 255, 0.41);" class="pb-2">sentiment
-                                                    index</p>
-                                                <div class="flex items-center justify-around">
-                                                    <button class="flex rounded p-1 items-center" style="background: linear-gradient(180deg, #36F761 0%, rgba(96, 254, 197, 0.23) 100%);">
-                                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                                                        <p class="text-white text-[12px]">38.5%</p>
+                                                <span class="text-white">News in Crypto</span>
+                                                <span style="color: rgba(255, 255, 255, 0.41);" class="pb-2">sentiment
+                                                    index</span>
+                                                <div class="items-center-around">
+                                                    <button class="rounded p-1 items-center"
+                                                        style="background: linear-gradient(180deg, #36F761 0%, rgba(96, 254, 197, 0.23) 100%);">
+                                                        <svg class="w-4 h-4 text-white" fill="currentColor"
+                                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd"
+                                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                                clip-rule="evenodd"></path>
+                                                        </svg>
+                                                        <span class="text-white font-12">38.5%</span>
                                                     </button>
-                                                    <button class="flex rounded p-1 ml-1 items-center" style="background: linear-gradient(180deg, #F73636 0%, rgba(254, 96, 219, 0.23) 100%);">
-                                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                                                        <p class="text-white text-[12px]">61.5%</p>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 w-[200px] subscrollx mr-2 2xl:mr-0"
-                                        style="background-image: url(./assets/image/Frame29.png); background-repeat: no-repeat;">
-                                        <div class="w-[100%]">
-                                            <div class="px-6 py-4">
-                                                <p class="text-white">Market Cricle</p>
-                                                <p style="color: rgba(255, 255, 255, 0.41);" class="pb-2">Market
-                                                    index</p>
-                                                <span>Extreme fear</span><span>23</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 w-[200px] subscrollx mr-2 2xl:mr-0"
-                                        style="background-image: url(./assets/image/Frame29.png); background-repeat: no-repeat;">
-                                        <div class="w-[100%]">
-                                            <div class="px-6 py-4">
-                                                <p class="text-white">Market Cricle</p>
-                                                <p style="color: rgba(255, 255, 255, 0.41);" class="pb-2">Market
-                                                    index</p>
-                                                <span>Extreme fear</span><span>23</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 w-[200px] subscrollx mr-2 2xl:mr-0"
-                                        style="background-image: url(./assets/image/Frame29.png); background-repeat: no-repeat;">
-                                        <div class="w-[100%]">
-                                            <div class="px-6 py-4">
-                                                <p class="text-white">News in Crypto</p>
-                                                <p style="color: rgba(255, 255, 255, 0.41);" class="pb-2">sentiment
-                                                    index</p>
-                                                <div class="flex items-center justify-around">
-                                                    <button class="flex rounded p-1 items-center" style="background: linear-gradient(180deg, #36F761 0%, rgba(96, 254, 197, 0.23) 100%);">
-                                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                                                        <p class="text-white text-[12px]">38.5%</p>
-                                                    </button>
-                                                    <button class="flex rounded p-1 ml-1 items-center" style="background: linear-gradient(180deg, #F73636 0%, rgba(254, 96, 219, 0.23) 100%);">
-                                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                                                        <p class="text-white text-[12px]">61.5%</p>
+                                                    <button class="rounded p-1 ml-1 items-center"
+                                                        style="background: linear-gradient(180deg, #F73636 0%, rgba(254, 96, 219, 0.23) 100%);">
+                                                        <svg class="w-4 h-4 text-white" fill="currentColor"
+                                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd"
+                                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                                clip-rule="evenodd"></path>
+                                                        </svg>
+                                                        <span class="text-white font-12">61.5%</span>
                                                     </button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mb-3 w-[200px] subscrollx mr-2 2xl:mr-0"
+                                    <div class="mb-3 w-200 subscrollx subnews"
                                         style="background-image: url(./assets/image/Frame29.png); background-repeat: no-repeat;">
-                                        <div class="w-[100%]">
+                                        <div class="w-full">
                                             <div class="px-6 py-4">
-                                                <p class="text-white">Market Cricle</p>
-                                                <p style="color: rgba(255, 255, 255, 0.41);" class="pb-2">Market
-                                                    index</p>
+                                                <span class="text-white">Market Sentiment</span><br>
+                                                <span style="color: rgba(255, 255, 255, 0.41);" class="pb-2">fear & gread
+                                                    index</span><br>
                                                 <span>Extreme fear</span><span>23</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 w-200 subscrollx subnews"
+                                        style="background-image: url(./assets/image/Frame29.png); background-repeat: no-repeat;">
+                                        <div class="w-full">
+                                            <div class="px-6 py-4">
+                                                <span class="text-white">News in Crypto</span>
+                                                <span style="color: rgba(255, 255, 255, 0.41);" class="pb-2">sentiment
+                                                    index</span>
+                                                <div class="items-center-around">
+                                                    <button class="rounded p-1 items-center"
+                                                        style="background: linear-gradient(180deg, #36F761 0%, rgba(96, 254, 197, 0.23) 100%);">
+                                                        <svg class="w-4 h-4 text-white" fill="currentColor"
+                                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd"
+                                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                                clip-rule="evenodd"></path>
+                                                        </svg>
+                                                        <span class="text-white font-12">38.5%</span>
+                                                    </button>
+                                                    <button class="rounded p-1 ml-1 items-center"
+                                                        style="background: linear-gradient(180deg, #F73636 0%, rgba(254, 96, 219, 0.23) 100%);">
+                                                        <svg class="w-4 h-4 text-white" fill="currentColor"
+                                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd"
+                                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                                clip-rule="evenodd"></path>
+                                                        </svg>
+                                                        <span class="text-white font-12">61.5%</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 w-200 subscrollx subnews"
+                                        style="background-image: url(./assets/image/Frame29.png); background-repeat: no-repeat;">
+                                        <div class="w-full">
+                                            <div class="px-6 py-4">
+                                                <span class="text-white">Market Sentiment</span><br>
+                                                <span style="color: rgba(255, 255, 255, 0.41);" class="pb-2">fear & gread
+                                                    index</span><br>
+                                                <span>Extreme fear</span><span>23</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 w-200 subscrollx subnews"
+                                        style="background-image: url(./assets/image/Frame29.png); background-repeat: no-repeat;">
+                                        <div class="w-full">
+                                            <div class="px-6 py-4">
+                                                <span class="text-white">News in Crypto</span>
+                                                <span style="color: rgba(255, 255, 255, 0.41);" class="pb-2">sentiment
+                                                    index</span>
+                                                <div class="items-center-around">
+                                                    <button class="rounded p-1 items-center"
+                                                        style="background: linear-gradient(180deg, #36F761 0%, rgba(96, 254, 197, 0.23) 100%);">
+                                                        <svg class="w-4 h-4 text-white" fill="currentColor"
+                                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd"
+                                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                                clip-rule="evenodd"></path>
+                                                        </svg>
+                                                        <span class="text-white font-12">38.5%</span>
+                                                    </button>
+                                                    <button class="rounded p-1 ml-1 items-center"
+                                                        style="background: linear-gradient(180deg, #F73636 0%, rgba(254, 96, 219, 0.23) 100%);">
+                                                        <svg class="w-4 h-4 text-white" fill="currentColor"
+                                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd"
+                                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                                clip-rule="evenodd"></path>
+                                                        </svg>
+                                                        <span class="text-white font-12">61.5%</span>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -972,14 +1206,14 @@
             </div>
 
             <!-- My Favorites -->
-            <div class="hidden lg:block">
+            <div class="side">
 
                 <!-- My Favorite -->
 
                 <div class="my-5">
-                    <button class="flex border border-gray-600 rounded py-2 px-2">
-                        <p class="text-white text-[15px]">My Favorite</p>
-                        <div class="flex items-center justify-center w-[24px] h-[24px]">
+                    <button class="topprotocal">
+                        <span class="text-white font-15">My Favorite</span>
+                        <div class="justify-align-center w-24 h-24">
                             <img src="./assets/image/Icone_Side-Menu/Icon.svg" alt="">
                         </div>
                     </button>
@@ -994,18 +1228,18 @@
                 <div class="flex">
                     <!-- coinranking -->
                     <div class="my-5">
-                        <div class="flex border border-gray-600 rounded py-2 px-2" style="background: #23233F;">
-                            <p class="text-white text-[15px]">Coin Ranking</p>
-                            <div class="flex items-center justify-center w-[24px] ml-1">
+                        <div class="topprotocal" style="background: #23233F;">
+                            <span class="text-white font-15">Coin Ranking</span>
+                            <div class="justify-align-center w-24 ml-1">
                                 <img src="./assets/image/Icone_Side-Menu/Icon.svg" alt="">
                             </div>
                         </div>
                     </div>
                     <!-- filters -->
                     <div class="my-5 ml-3">
-                        <div class="flex border border-gray-600 rounded py-2 px-2" style="background: #23233F;" onclick="filter()">
-                            <p class="text-white text-[15px]">Filters</p>
-                            <div class="flex items-center justify-center w-[24px] ml-1">
+                        <div class="topprotocal" style="background: #23233F;" onclick="filter()">
+                            <span class="text-white font-15">Filters</span>
+                            <div class="justify-align-center w-24 ml-1">
                                 <img src="./assets/image/Icone_Side-Menu/filtericon.svg" alt="">
                             </div>
                         </div>
@@ -1016,35 +1250,37 @@
 
                 <div style="background-color: #23283B;" class="mb-3 hidden flex scrollx" id="filter">
                     <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
-                        class="text-white px-4 py-2.5 text-center inline-flex items-center subscrollx" type="button">Algorithum
+                        class="text-white px-4 py-25 text-center inline-items-center subscrollx"
+                        type="button">Algorithum
                         <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
                             </path>
                         </svg></button>
                     <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
-                        class="text-white px-4 py-2.5 text-center inline-flex items-center subscrollx" type="button">Category <svg
-                            class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor"
+                        class="text-white px-4 py-25 text-center inline-items-center subscrollx" type="button">Category
+                        <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
                             </path>
                         </svg></button>
                     <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
-                        class="subscrollx text-white px-4 py-2.5 text-center inline-flex items-center" type="button">Ecosystem <svg
-                            class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor"
+                        class="subscrollx text-white px-4 py-25 text-center inline-items-center" type="button">Ecosystem
+                        <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
                             </path>
                         </svg></button>
                     <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
-                        class="subscrollx text-white px-4 py-2.5 text-center inline-flex items-center" type="button">Programming
+                        class="subscrollx text-white px-4 py-25 text-center inline-items-center"
+                        type="button">Programming
                         language <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
                             </path>
                         </svg></button>
                     <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
-                        class="subscrollx text-white px-4 py-2.5 text-center inline-flex items-center" type="button">Type <svg
+                        class="subscrollx text-white px-4 py-25 text-center inline-items-center" type="button">Type <svg
                             class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
@@ -1064,7 +1300,8 @@
                         <div id="supply" class="subscrollx"></div>
                         <div class="subscrollx relative">
                             <div id="rsi"></div>
-                            <div class="absolute w-[100%] h-[100%] top-[0px]" style="background:rgba(92, 92, 234, 0.31);"></div>
+                            <div class="absolute w-full"
+                                style="height: 100%; top: 0px; background:rgba(92, 92, 234, 0.31);"></div>
                         </div>
                         <div id="chart" class="subscrollx"></div>
                         <div id="percent" class="subscrollx"></div>
@@ -1076,11 +1313,11 @@
 
             <footer>
                 <div class="py-6 px-16 bg-black">
-                    <div class="grid md:grid-cols-1 lg:grid-cols-2">
+                    <div class="footer">
                         <div>
                             <div class="flex">
                                 <img style="height: 60px; width:60px;" src="./assets/image/Logo (1).png" alt="">
-                                <div class="text-white font-medium flex items-center pl-2">
+                                <div class="text-white font-medium items-center" style="padding-left: 0.5rem;">
                                     <img src="./assets/image/logotype_text.svg" alt="">
                                 </div>
                             </div>
@@ -1088,23 +1325,24 @@
                                 <div>
                                     <img src="./assets/image/Rectangle 25.png" alt="">
                                 </div>
-                                <div class="pl-3 flex items-center">
+                                <div class="pl-3 items-center">
                                     <div>
                                         <div class="flex pb-2">
                                             <img src="./assets/image/apple.svg" alt="">
                                             <img class="pl-3" src="./assets/image/robot.svg" alt="">
                                         </div>
-                                        <div class="hidden md:block">
+                                        <div class="footershow">
                                             <div class="text-white font-medium">
                                                 <p>Try the brand new CoinRango App on your
                                                     smartphone</p>
                                             </div>
-                                            <div class="text-white font-medium" style="opacity:0.3;">Scan to download</div>
+                                            <div class="text-white font-medium" style="opacity:0.3;">Scan to download
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="md:hidden">
+                            <div class="footerhidden">
                                 <div class="text-white font-medium">
                                     <p>Try the brand new CoinRango App on your
                                         smartphone</p>
@@ -1112,7 +1350,7 @@
                                 <div class="text-white font-medium" style="opacity:0.3;">Scan to download</div>
                             </div>
                         </div>
-                        <div class="lg:flex justify-end hidden" style="height: 30px;">
+                        <div class="footersocialicon" style="height: 30px;">
                             <img src="./assets/image/Icone_Side-Menu/footer social/round-instagram.svg" alt="">
                             <img class="pl-2" src="./assets/image/Icone_Side-Menu/footer social/round-telegram.svg"
                                 alt="">
@@ -1120,7 +1358,7 @@
                                 alt="">
                         </div>
                     </div>
-                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 pt-8">
+                    <div class="footercontent gap-4 pt-8">
                         <div>
                             <p class="text-white">Products</p>
                             <div class="text-white" style="opacity: 0.3;">
@@ -1171,7 +1409,7 @@
                                 <p>TokenPocket</p>
                             </div>
                         </div>
-                        <div class="flex justify-center lg:hidden">
+                        <div class="justify-center footerimage">
                             <div class="" style="height: 30px;">
                                 <img src="./assets/image/Icone_Side-Menu/footer social/round-instagram.svg" alt="">
                                 <img class="py-3" src="./assets/image/Icone_Side-Menu/footer social/round-telegram.svg"
@@ -1181,7 +1419,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="text-white text-center pt-4" style="opacity: 0.3;">
+                    <div class="text-white text-center" style="opacity: 0.3; padding-top: 1rem;">
                         <p>@ 2020-2022 Coinrango - All rights
                             reserved</p>
                     </div>
